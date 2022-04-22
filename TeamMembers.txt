@@ -1,2 +1,6 @@
-
-Führen Sie hier die Namen aller Mitglieder Ihres Teams auf.
+Adrian Martin (adrian.tim.martin@hs-furtwangen.de)
+Dominik Butscher (dominik.butscher@hs-furtwangen.de)
+Eric Miller (eric.miller@hs-furtwangen.de)
+Nick Rothmund (nick.horst.rothmund@hs-furtwangen.de)
+Moritz Schneider (moritz.johannes.schneider@hs-furtwangen.de)
+Robert Voß (robert.voss@hs-furtwangen.de)
