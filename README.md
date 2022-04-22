@@ -1,6 +1,6 @@
 # DV-Projekt
 
-Dieses GitHub Repository ist der Startpunkt des DV-Projekts. Das DV-Projekt soll Studierenden vermitteln, wie ein DV-Projekt in der Praxis abläuft und wie Entwickler miteinander zusammenarbeiten.
+Dieses GitHub Repository ist der Startpunkt des DV-Projekts. Das DV-Projekt soll Studierenden vermitteln, wie ein Software-Projekt in der Praxis abläuft und wie Entwickler miteinander zusammenarbeiten.
 
 ## Setup
 
@@ -23,9 +23,9 @@ Bitte stellen Sie sicher, dass alle Teammitglieder dieselbe Version der Software
 
 ### Einrichtung
 
-Alle Teammitglieder "clonen" das Team Repository auf Ihren Rechner (siehe Abschnitt "Wichtige Grundlagen > Teamwork" weiter unten)
+Alle Teammitglieder "clonen" das Team Repository auf Ihren Rechner (siehe Abschnitt "Wichtige Grundlagen > Teamwork" weiter unten). Änderungen, die Sie anschließend auf Ihrem Rechner machen, müssen mit Hilfe von Github-Desktop wieder in das Repository "gepusht" werden, damit diese den anderen Teammitglieder zur Verfügung stehen. Der Teamleiter trägt dann als erste Änderung in Ihrem Repository die Namen aller Teammitglieder in die Datei [TeamMembers.txt](TeamMembers.txt) ein.
 
-Als Programmier-Workspace soll der Ordner [2_Quellcode](2_Quellcode) ausgewählt werden. Dort existiert bereits eine Applikations-Vorlage, welche Sie als Ausgangspunkt verwenden können. Alternativ können Sie ein neues Java-Projekt anlegen. Falls ein Java-Projekt bei Teammitgliedern nicht automatisch in Eclipse angezeigt wird, so können Sie dieses manuell importieren: [Video Projektimport](https://youtu.be/R3k8S28pr1c)
+Für Ihr Programm soll als Programmier-Workspace der Ordner [2_Quellcode](2_Quellcode) ausgewählt werden. Dort existiert bereits eine Applikations-Vorlage, welche Sie als Ausgangspunkt verwenden können. Alternativ können Sie ein neues Java-Projekt anlegen. Falls ein Java-Projekt bei Teammitgliedern nicht automatisch in Eclipse angezeigt wird, so können Sie dieses manuell importieren: [Video Projektimport](https://youtu.be/R3k8S28pr1c)
 
 ## Wichtige Grundlagen
 
@@ -64,6 +64,10 @@ Ihre Anwendung sollte eine grafische Oberfläche haben. In Java kann dazu beispi
 * [Swing Login Form](https://youtu.be/iE8tZ0hn2Ws)
 * [Swing Layouts](https://youtu.be/TxCHvvr2bMQ)
 * [Drawing Graphics in Swing](https://youtu.be/KcEvHq8Pqs0)
+
+Weitere Informationen finden Sie auch im Dokument [GUI Threads](2_Quellcode/GUI_Threads.pdf).
+
+Sollten Sie ein Spiel mit Animationen oder sich bewegenden grafischen Elementen implementieren wollen, dann schauen Sie sich zudem gerne die folgende Playlist auf YouTube an: [Java 2D Game Programming](https://www.youtube.com/watch?v=LICU6zH8gVU&list=PLfHzvwt1lruOl0h6nn72545ISqh6Y1aPb&index=3)
 
 Im Ordner [2_Quellcode](2_Quellcode) finden Sie bereits eine Projektvorlage mit GUI, an welcher Sie sich orientieren können. Zusätzlich finden Sie im Ordner [Beispielprojekte](Beispielprojekte) weitere Beispiele.
 

@@ -27,3 +27,6 @@ hs_err_pid*
 # eclipse metadata
 */.metadata/.lock
 */.metadata/.plugins
+
+# mac
+.DS_Store
