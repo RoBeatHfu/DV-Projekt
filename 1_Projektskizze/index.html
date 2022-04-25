@@ -3,9 +3,12 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Projektskizze</title>
+	<title>Projektskizze 2048</title>
 </head>
+	
+<body background = "images/background.jpg"> 
 <body>
+	
 	<header>
 		<img src="images/HFU-Logo.png">
 		<h1>Projekt: Spiel "2048"</h1>
@@ -22,75 +25,51 @@
 	</header>
 	<main>
 		<h2>1. Projekt-Beschreibung</h2>
-		<p>Das Projekt "2048" ist ein simples Computerspiel, welches alleine gespielt wird. Dabei wird versucht durch Verschieben von 2er Potenzen auf die Zahl 2048 zu kommen.  </p>
-		<p>
+		<p>Das Projekt "2048" ist ein simples singleplayer Computerspiel. Dabei wird versucht durch Zusammenschieben von Feldern mit gleichen 2er Potenzen die Zahl 2048 zu erreichen.<br />
+			Die Steuerung erfolgt über die Pfeiltasten der Tastatur.<br />
+			Nach jedem Zug erscheint ein neues Feld. Während des Spiel werden die Spielzüge gezählt. Wird die Zahl 2048 erreicht gewinnt der Spieler. Sein Name und die Anzahl der benötigten Züge werden anschließend in einer Topscore-Liste gespeichert.<br />
+			Er verliert, wenn sich keine Felder mehr verschieben lassen.<br />
+			Ein übersichtliches Menü erleichtert die Navigation zwischen Spiel, Anleitung, Topscore-Liste und den Einstellungen.<p/>
+		<p>	
 		<h2>2. Features und Anforderungen</h2>
-		<p>Die wichtigsten Anforderungen an das Projekt sind:</p>
+		<h3>2.1 Die wichtigsten Anforderungen an das Projekt sind:</h3>
 		<ul>
 			<li>Ein kurzweiliger Spielspaß und Zeitvertreib</li>
-			<li>Eine Top-score liste, welche von beliebiegen Endgeräten aufgerufen werden kann</li>
+			<li>Eine Topscore-Liste, welche von beliebiegen Endgeräten aufgerufen werden kann</li>
 			<li>Der erreichte Score wird mit dem eingegeben Spielername verknüpft abgespeichert</li>
 			<li>Das Programm soll eine hohe Stabilität sowie eine schnelle Eingabeverarbeitung haben </li>
-			<li>Ein menü, durch welches das Spiel gestartet werden, eine Anleitung sowie die Topscore liste geöffnet werden kann.</li>
+			<li>Ein Menü, durch welches das Spiel gestartet werden, eine Anleitung sowie die Topscore-Liste geöffnet werden kann.</li>
 		</ul>
-		<p>Die nicht-funktionalen Anforderungen an das Projekt wären:</p>
+		<h3>2.2 Die nicht-funktionalen Anforderungen an das Projekt:</h3>
 		<ul>
-			<li>Die Benutzeroberfläche soll leicht verständlich sein und soll duch Dark- ,sowie Lightmode angepasst werden können </li>
-			<li>Das Programm soll Lauffähig unter Windows sein</li>
+			<li>Leicht verständliche und übersichtliche Benutzeroberfläche</li>
+			<li> Dark- & Lightmode</li>
+			<li>Das Programm soll auf Windows 7 oder neuer laufen</li>
 			<li>Verwaltet wird das Projekt mit Github</li>
-			<li>Das Klassendiagramm soll mit dem Programm ****************, das Spiel mit Eclipse ertellt werden.</li>
+			<li>Das Klassendiagramm soll mit dem Programm Visual Paradigm Online, das Spiel mit Java in Eclipse ertellt werden.</li>
 		</ul>
 		<h2>3. Architektur</h2>
-		<p>TODO: Beschreibung der Software-Architektur inkl. Klassendiagramm z. B.:</p>
-		<p>Das Klassendiagramm kann mit Hilfe von Pseudo Code (siehe HTML Quelltext) erstellt werden <a href="https://mermaid-js.github.io/mermaid/#/classDiagram">(Hilfe)</a>.
-
-		<div class="diagram">
-			classDiagram
-			class Animal {
-				int age
-				String gender
-				isMammal()
-				mate()
-			}
-			class Duck {
-				String beakColor
-				swim()
-				quack()
-			}
-			class Fish {
-				int sizeInFeet
-				canEat()
-			}
-			class Zebra {
-				bool is_wild
-				run()
-			}
-			Animal <|-- Duck
-			Animal <|-- Fish
-			Animal <|-- Zebra
-		</div>
+		<img src="images/UML.png">
+		<p> Diese Architektur ist ein erster Entwurf und soll als Arbeitsgrundlage dienen. Es ist davon auszugehen, dass die vorhandenen Klassen (falls sinnvoll) durch weitere Methoden ergänzt werden.<br />
+			Auch die verschiedenen Variablen werden im Laufe des Projekts mit ihrem zugehörigem Typ und Name festgelegt.<p/>
+		<p>
 		<h2>4. Vorläufige Aufwandsschätzung und Aufteilung</h2>
-			<h2>4.1 Aufteilung</h2>
+		<h3>4.1 Aufteilung</h3>
 		<p>Robert: Teamleiter und Verwalter von Github</p>
-		<p>Adrian: ist für die GUI zuständig</p>
-		<p>Dominik, Robert und Eric programmieren das Spiel</p>
-		<p>Nick und Moritz programmieren die Topscoreliste</p>
-			<h2>4.1 Aufwand</h2>
-			<p>Programmieren des Spiels: 40h</p>
-			<p>Programmieren der GUI: 20h</p>
-			<p>Programmieren der Topscoreliste: 40h</p>
-			<p>Debugging: 20h</p>
-			
-			
-		<p>TODO: Schätzen Sie den Aufwand der verschiedenen Teile Ihres Programms ab und legen Sie fest, wie die Aufteilung auf die Gruppenmitglieder aussehen soll.</p>
-		<h2>Optional: Verweis auf andere HTML Dateien</h2>
-		<p><a href="UML.html">Eine weitere HTML-Datei</a></p>
-			
+		<p>Adrian: für die GUI zuständig</p>
+		<p>Dominik, Robert & Eric: Programmierung des Spiels</p>
+		<p>Nick & Moritz: Programmierung Topscore-Liste</p>
+		<h3>4.2 Aufwand</h3>
+		<p>Programmieren des Spiels: 40h</p>
+		<p>Programmieren der GUI: 20h</p>
+		<p>Programmieren der Topscore-Liste: 40h</p>
+		<p>Debugging: 20h</p>	
+		<h2>5. Quellenangaben</h2>
+		<p> Hintergrundbild: https://play.google.com/store/apps/details?id=com.ketchapp.game2048bricks&hl=gsw&gl=US [11.04.2022 14:23]<p/>
 	</main>
 	<footer></footer>
 </body>
 </html>
-
 <!-- scripts to render diagrams (do not touch!) -->
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>
