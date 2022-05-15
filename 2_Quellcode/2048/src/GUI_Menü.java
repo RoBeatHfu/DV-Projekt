@@ -36,7 +36,7 @@ public class GUI_Menü extends javax.swing.JFrame {
         });
         jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jButton1KeyPressed(evt);
+                keyPressed(evt);
             }
         });
 
