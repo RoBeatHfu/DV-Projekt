@@ -112,10 +112,10 @@ public class GUI_Menü extends javax.swing.JFrame {
     }                                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    	// Aktion bei Betätigen
-    }                                        
+            System.exit(0);
+    }                                               
 
-    private void jButton1KeyPressed(java.awt.event.KeyEvent evt) {                                    
+    private void jButton1ActionPerformed(java.awt.event.KeyEvent evt) {                                    
     	// Aktion bei Betätigen
     }                                   
 
