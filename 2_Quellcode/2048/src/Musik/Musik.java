@@ -11,9 +11,8 @@ import javax.sound.sampled.Clip;
 
 public class Musik {
   public static void main(String[] args) throws Exception {
-    File audioFile = new File("c:/Windows/Media/tada.wav");
+    File audioFile = new File("file name");
 
-    // Läuft bereits in einem eigenen Thread
     play(audioFile);
 
     TimeUnit.SECONDS.sleep(10);
