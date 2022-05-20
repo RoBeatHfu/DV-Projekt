@@ -11,6 +11,8 @@ public class GUI_Menü extends javax.swing.JFrame {
 
                         
     private void initComponents() {
+    	
+    	
 
         jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
