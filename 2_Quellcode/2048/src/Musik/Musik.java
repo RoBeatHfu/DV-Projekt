@@ -11,7 +11,7 @@ import javax.sound.sampled.Clip;
 
 public class Musik {
   public static void main(String[] args) throws Exception {
-    File audioFile = new File("file name");
+    File audioFile = new File("https://github.com/RoBeatHfu/DV-Projekt/blob/main/2_Quellcode/2_Quellcode_Song.wav");
 
     play(audioFile);
 
