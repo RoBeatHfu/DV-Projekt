@@ -33,7 +33,7 @@ public class GUI_Menü extends javax.swing.JFrame {
         jButton1.setText("Play");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButton1ActionPerformed1(evt);
             }
         });
         jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -109,25 +109,26 @@ public class GUI_Menü extends javax.swing.JFrame {
         pack();
     }                     
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    	// Aktion bei Betätigen
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {  
+    	setVisible(false);
+    	new GUI_Settings().setVisible(true);
+    	
     }                                        
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {                                         
             System.exit(0);
     }                                               
 
-    private void jButton1ActionPerformed(java.awt.event.KeyEvent evt) {                                    
-    	// Aktion bei Betätigen
+    private void jButton1ActionPerformed1(java.awt.event.ActionEvent evt) {                                    
+    	setVisible(false);
+    	new GUI_Spiel().setVisible(true);
+    	
     }                                   
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	// Aktion bei Betätigen
     }                                        
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // Aktion bei Betätigen
-    }                                        
 
     public static void main(String args[]) {
     
