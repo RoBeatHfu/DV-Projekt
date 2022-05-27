@@ -31,6 +31,7 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); 
         jButton1.setText("Play");
+        jButton1.setBackground(new java.awt.Color(0, 136, 82));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed1(evt);
@@ -52,6 +53,7 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); 
         jButton2.setText("Highscore");
+        jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -60,6 +62,7 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); 
         jButton3.setText("Settings");
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -68,6 +71,7 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); 
         jButton4.setText("Quit");
+        jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -126,7 +130,7 @@ public class GUI_Menü extends javax.swing.JFrame {
     }                                   
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    	// Aktion bei Betätigen
+    	
     }                                        
 
 

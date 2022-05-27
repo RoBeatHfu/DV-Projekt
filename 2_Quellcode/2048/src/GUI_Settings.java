@@ -24,6 +24,7 @@ public class GUI_Settings extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); 
         jButton3.setText("Back to Menu");
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
