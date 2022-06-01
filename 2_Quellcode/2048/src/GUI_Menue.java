@@ -2,10 +2,10 @@
 
 /*******AdiAdiAdrian******/
 
-public class GUI_Menü extends javax.swing.JFrame {
+public class GUI_Menue extends javax.swing.JFrame {
 
     
-    public GUI_Menü() {
+    public GUI_Menue() {
         initComponents();
     }
 
