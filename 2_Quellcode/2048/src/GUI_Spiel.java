@@ -53,7 +53,7 @@ public class GUI_Spiel extends javax.swing.JFrame {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {                                         
     	setVisible(false);
-    	new GUI_Menü().setVisible(true);
+    	new GUI_Menue().setVisible(true);
     	
     }                                        
 
