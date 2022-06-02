@@ -21,6 +21,6 @@ public class Teil {
 		return this;                                        /* Gibt Teil a wieder aus*/
 	}
 	public int get() {                                      /* Gibt den neuen Zahlenwert aus*/
-		return (int) Math.pow(Basis,this.potenz);           /* Zahlenwert = Basis ^ Potenz*/
+		return (int) Math.pow(Basis, this.potenz);           /* Zahlenwert = Basis ^ Potenz*/
 	}
 }
