@@ -1,6 +1,4 @@
-
-
-/*******AdiAdiAdrian******/
+/*******Adrian******/
 
 public class GUI_Menue extends javax.swing.JFrame {
 
