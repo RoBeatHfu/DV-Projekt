@@ -1,6 +1,6 @@
+package zwanzigAchtUndVierzig;
 
 public class Teil {
-
 	int potenz;
 	public boolean fusible= true;
 	final int Basis =2;

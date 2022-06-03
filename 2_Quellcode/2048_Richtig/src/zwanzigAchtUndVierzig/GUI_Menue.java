@@ -1,11 +1,9 @@
+package zwanzigAchtUndVierzig;
 
-
-/*******AdiAdiAdrian******/
-
-public class GUI_Menü extends javax.swing.JFrame {
+public class GUI_Menue extends javax.swing.JFrame{
 
     
-    public GUI_Menü() {
+    public GUI_Menue() {
         initComponents();
     }
 
@@ -31,7 +29,6 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); 
         jButton1.setText("Play");
-        jButton1.setBackground(new java.awt.Color(0, 136, 82));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed1(evt);
@@ -53,7 +50,6 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); 
         jButton2.setText("Highscore");
-        jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -62,7 +58,6 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); 
         jButton3.setText("Settings");
-        jButton3.setBackground(new java.awt.Color(153, 153, 153));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -71,7 +66,6 @@ public class GUI_Menü extends javax.swing.JFrame {
 
         jButton4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18)); 
         jButton4.setText("Quit");
-        jButton4.setBackground(new java.awt.Color(153, 153, 153));
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -130,7 +124,7 @@ public class GUI_Menü extends javax.swing.JFrame {
     }                                   
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    	
+    	// Aktion bei Betätigen
     }                                        
 
 
@@ -144,19 +138,19 @@ public class GUI_Menü extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(GUI_Menü.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_Menue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(GUI_Menü.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_Menue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(GUI_Menü.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_Menue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(GUI_Menü.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(GUI_Menue.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
     
         
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI_Menü().setVisible(true);
+                new GUI_Menue().setVisible(true);
             }
         });
     }
@@ -168,5 +162,3 @@ public class GUI_Menü extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1; 
     private javax.swing.JLabel jLabel2; 
 }
-
-
