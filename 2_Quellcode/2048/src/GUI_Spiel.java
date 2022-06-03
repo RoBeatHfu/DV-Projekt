@@ -30,6 +30,9 @@ public class GUI_Spiel extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("2048");
+        setLocation(new java.awt.Point(0, 0));
+        setName("2048"); 
         setPreferredSize(new java.awt.Dimension(620, 620));
         setResizable(false);
 
