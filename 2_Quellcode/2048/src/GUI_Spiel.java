@@ -2,13 +2,13 @@
 
 public class GUI_Spiel extends javax.swing.JFrame {
 
- 
+	
     public GUI_Spiel() {
         initComponents();
     }
                          
     private void initComponents() {
-
+    	
         jLabel1 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -39,6 +39,7 @@ public class GUI_Spiel extends javax.swing.JFrame {
         jLabel1.setText("2048");
 
         jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); 
+        jButton3.setBackground(new java.awt.Color(153, 153, 153));
         jButton3.setText("Back to Menu");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -47,9 +48,10 @@ public class GUI_Spiel extends javax.swing.JFrame {
         });
 
         jLabel2.setBackground(new java.awt.Color(102, 102, 102));
+        
         jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); 
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("0");
+		jLabel2.setText("0");
         jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel3.setBackground(new java.awt.Color(102, 102, 102));
