@@ -10,7 +10,7 @@ public class GUI_Spiel extends javax.swing.JFrame {
     private void initComponents() {
     	
         jLabel0 = new javax.swing.JLabel();		//2048
-        jButton3 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();   //zurück zum Menü
         jLabel1 = new javax.swing.JLabel();		//Feld1
         jLabel2 = new javax.swing.JLabel();		//Feld2
         jLabel3 = new javax.swing.JLabel();		//Feld3

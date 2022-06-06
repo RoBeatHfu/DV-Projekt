@@ -13,16 +13,16 @@ public class GUI_Menue extends javax.swing.JFrame {
     	
     	
 
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();  //Spiel starten 
+        jLabel1 = new javax.swing.JLabel();    //2048
         //jLabel2 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();  //Highscoreliste öffnen 
+        jButton3 = new javax.swing.JButton();  //Einstellungen öffnen 
+        jButton4 = new javax.swing.JButton();  //Anwendung schließen 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("2048");
-        setLocation(new java.awt.Point(100, 100));
+        setLocation(new java.awt.Point(0, 0));
         setName("2048"); 
         setPreferredSize(new java.awt.Dimension(400, 500));
         setResizable(false);
