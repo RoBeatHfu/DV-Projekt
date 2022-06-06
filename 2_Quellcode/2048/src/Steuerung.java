@@ -1,7 +1,7 @@
 
 public class Steuerung {
 
-	static int [] felder = new int [16];					//Array contains the values of the fields
+	static int [] field = new int [16];					//Array contains the values of the fields
 	
 	/**
 	 * chooses a random field and checks if it is free
@@ -21,7 +21,7 @@ public class Steuerung {
 	 * @return
 	 */
 	public static boolean fieldFree(int fieldIndex) {
-		if(felder[fieldIndex] == 0) {
+		if(field[fieldIndex] == 0) {
 			return true;
 		} else {
 			return false;
@@ -33,12 +33,14 @@ public class Steuerung {
 	 * @return
 	 */
 	public int getValue(int fieldIndex) {
-		int wert = felder[fieldIndex]; 						
+		int wert = field[fieldIndex]; 						
 		return wert;
 	}
 	
 	
 	public static void main(String args[]) {				//Zum Testen während dem entwickeln
-		
+		for(int i = 0; i <16; i++) {
+			field[i] = 0;
+		}
 	}
 }
