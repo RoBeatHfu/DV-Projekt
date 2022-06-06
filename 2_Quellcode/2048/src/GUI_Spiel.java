@@ -4,6 +4,9 @@ public class GUI_Spiel extends javax.swing.JFrame {
 
 	
     public GUI_Spiel() {
+    	
+    	//refresh des Spielfelds nach jedem Zug!!!
+    	
         initComponents();
     }
                          

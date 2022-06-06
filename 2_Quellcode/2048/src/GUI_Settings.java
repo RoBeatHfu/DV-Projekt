@@ -14,7 +14,7 @@ public class GUI_Settings extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Settings");
+        setTitle("2048 Settings");
         setPreferredSize(new java.awt.Dimension(400, 500));
         setResizable(false);
 

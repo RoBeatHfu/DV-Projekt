@@ -21,7 +21,7 @@ public class GUI_Menue extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();  //Anwendung schlieﬂen 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("2048");
+        setTitle("2048 Menue");
         setLocation(new java.awt.Point(0, 0));
         setName("2048"); 
         setPreferredSize(new java.awt.Dimension(400, 500));
