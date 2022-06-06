@@ -2,6 +2,7 @@
 public class Steuerung {
 
 	static int [] field = new int [16];					//Array contains the values of the fields
+	int score = 0;
 	
 	/**
 	 * chooses a random field and checks if it is free
@@ -37,10 +38,28 @@ public class Steuerung {
 		return wert;
 	}
 	
-	
+	/**
+	 * returns 2 or 4 or the next move
+	 * @return
+	 */
+	public static int generateNr() {
+		int nr= (int) (Math.random()*10);
+		if(nr == 0) {
+			return 4;
+		} else {
+			return 2;
+		}
+	}
+		
 	public static void main(String args[]) {				//Zum Testen während dem entwickeln
 		for(int i = 0; i <16; i++) {
 			field[i] = 0;
+		}
+		for(int i = 0; i <10; i++) {
+			field[getIndexRandomFreeField()] = generateNr();
+		}
+		for(int i = 0; i <16; i++) {
+			System.out.println(field[i]);
 		}
 	}
 }
