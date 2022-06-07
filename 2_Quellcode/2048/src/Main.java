@@ -7,7 +7,11 @@ public class Main {
 		g1m.setVisible(true);
 		//*********************************************//generate Fields
 		Fields f1 = new Fields();
-		
-		
+		for(int i = 0; i < 5; i++) {
+			f1.fillFieldAfterMove();
+		}
+		f1.printFields();
+		f1.moveUp('r');
+		f1.printFields();
 	}
 }
