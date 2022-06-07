@@ -5,7 +5,7 @@ public class Main {
 		//*********************************************//generate GUI
 		GUI_Menue g1m = new GUI_Menue();
 		g1m.setVisible(true);
-		//*********************************************//generate Steuerung
+		//*********************************************//generate Fields
 		Fields f1 = new Fields();
 		
 		
