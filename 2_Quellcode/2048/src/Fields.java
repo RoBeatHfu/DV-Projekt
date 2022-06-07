@@ -11,36 +11,50 @@ public class Fields {
 		printFields();
 	}
 	
-	/**
-	 * doubles the value of x and set y to zero
-	 * @param x
-	 * @param y
-	 */
-	public void fusion(int x, int y) {
-		field[y] = 0;
-		field[x] = field[x] * 2;
+	
+	public void fusion(char direction) {
+
 	}
 	
 	
 	/**
-	 * skips all zeroes in one direction
+	 * moves all fields to the edge in one direction 
+	 * and skips all zeroes in this direction
 	 * @param direction 't' 'b' 'l' 'r'
 	 */
 	public void moveUp(char direction) {
 		switch (direction) {
 		case 't':
-			
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 0; i < 4+k; i = i+4) {
+						if(getValue(i) == 0) {
+							field[i] = field[i-4];
+							field[i-4] = 0;
+						}
+					}
+				}
+			}
 			break;
 		case 'b':
-			
+			for(int k = 0; k < 4; k++) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 12+k; i > 0+k; i = i-4) {
+						if(getValue(i) == 0) {
+							field[i] = field[i-4];
+							field[i-4] = 0;
+						}
+					}
+				}
+			}
 			break;
 		case 'l':
 			for(int k = 0; k < 15; k = k+4) {
 				for(int j = 0; j < 3; j++) {
-					for(int i = 0; i < 3; i++) {
+					for(int i = 0+k; i < 3+k; i++) {
 						if(getValue(i) == 0 && i % 4 != 3) {
-							field[i+k] = field[i+1+k];
-							field[i+1+k] = 0;
+							field[i] = field[i+1];
+							field[i+1] = 0;
 						}
 					}
 				}
@@ -49,10 +63,10 @@ public class Fields {
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
 				for(int j = 0; j < 3; j++) {
-					for(int i = 3; i > 0; i--) {
-						if(getValue(i+k) == 0) {
-							field[i+k] = field[i-1+k];
-							field[i-1+k] = 0;
+					for(int i = 3+k; i > 0; i--) {
+						if(getValue(i) == 0) {
+							field[i] = field[i-1];
+							field[i-1] = 0;
 						}
 					}
 				}
@@ -108,6 +122,14 @@ public class Fields {
 		} else {
 			return false;
 		}
+	}
+	
+	public int getScore() {
+		int score = 0;
+		for(int i = 0; i < 16; i++) {
+			score = score + getValue(i);
+		}
+		return score;
 	}
 	
 	/**
