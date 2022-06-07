@@ -12,6 +12,48 @@ public class Fields {
 	}
 	
 	/**
+	 * doubles the value of x and set y to zero
+	 * @param x
+	 * @param y
+	 */
+	public void fusion(int x, int y) {
+		field[y] = 0;
+		field[x] = field[x] * 2;
+	}
+	
+	
+	/**
+	 * skips all zeroes in one direction
+	 * @param direction 't' 'b' 'l' 'r'
+	 */
+	public void moveUp(char direction) {
+		switch (direction) {
+		case 't':
+			break;
+		case 'b':
+			break;
+		case 'l':
+			break;
+		case 'r':
+			break;
+		}
+	}
+	
+	/**
+	 * checks whether two fields are fusionable
+	 * @param x
+	 * @param y
+	 * @return
+	 */
+	public boolean isFusionable(int x, int y) {
+		if(getValue(x) == getValue(y)) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	/**
 	 * fills a random free field with 2 or 4
 	 * use this method after any move
 	 * increases the score by one 
