@@ -1,8 +1,8 @@
 
 public class Fields {
 
-	static int [] field = new int [16];					//Array contains the values of the fields
-	static int score = 0;
+	int [] field = new int [16];					//Array contains the values of the fields
+	int score = 0;
 	
 	public Fields() {
 		clearFields();
@@ -16,7 +16,7 @@ public class Fields {
 	 * use this method after any move
 	 * increases the score by one 
 	 */
-	public static void fillFieldAfterMove() {
+	public void fillFieldAfterMove() {
 		field[getIndexRandomFreeField()] =  generateNr();
 		score++;
 	}
@@ -25,7 +25,7 @@ public class Fields {
 	 * chooses a random free field
 	 * @return
 	 */
-	public static int getIndexRandomFreeField(){
+	private int getIndexRandomFreeField(){
 		int z = 0;
 		do {
 			z = (int) (Math.random() * 20);
@@ -38,7 +38,7 @@ public class Fields {
 	 * @param feldIndex
 	 * @return
 	 */
-	public static boolean fieldFree(int fieldIndex) {
+	private boolean fieldFree(int fieldIndex) {
 		if(field[fieldIndex] == 0) {
 			return true;
 		} else {
@@ -51,7 +51,7 @@ public class Fields {
 	 * @param feldIndex
 	 * @return
 	 */
-	public int getValue(int fieldIndex) {
+	private int getValue(int fieldIndex) {
 		int wert = field[fieldIndex]; 						
 		return wert;
 	}
@@ -60,7 +60,7 @@ public class Fields {
 	 * returns 2 or 4 for the next move
 	 * @return
 	 */
-	public static int generateNr() {
+	private int generateNr() {
 		int nr= (int) (Math.random()*10);
 		if(nr == 0) {
 			return 4;
@@ -73,7 +73,7 @@ public class Fields {
 	/**
 	 * assigns the value 0 to each field
 	 */
-	public static void clearFields() {
+	private void clearFields() {
 		for(int i = 0; i <16; i++) {
 			field[i] = 0;
 		}
@@ -82,7 +82,7 @@ public class Fields {
 	/**
 	 * gives the value of every field
 	 */
-	public static void printFields() {
+	public void printFields() {
 		for(int i = 0; i < 16; i = i + 4) {
 			System.out.println(field[i]+"\t"+field[i+1]+"\t"+field[i+2]+"\t"+field[i+3]);
 		}
