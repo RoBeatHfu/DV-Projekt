@@ -29,12 +29,24 @@ public class Fields {
 	public void moveUp(char direction) {
 		switch (direction) {
 		case 't':
+			
 			break;
 		case 'b':
+			
 			break;
 		case 'l':
 			break;
 		case 'r':
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 3; i > 0; i--) {
+						if(getValue(i+k) == 0) {
+							field[i+k] = field[i-1+k];
+							field[i-1+k] = 0;
+						}
+					}
+				}
+			}
 			break;
 		}
 	}
@@ -91,11 +103,20 @@ public class Fields {
 	/**
 	 * returns the value of a field
 	 * @param feldIndex
-	 * @return the value
+	 * @return value
 	 */
 	public int getValue(int fieldIndex) {
 		int wert = field[fieldIndex]; 						
 		return wert;
+	}
+	
+	/**
+	 * sets a value into a field
+	 * @param fieldIndex
+	 * @param value
+	 */
+	private void setValue(int fieldIndex, int value) {
+		field[fieldIndex] = value;
 	}
 	
 	/**
@@ -110,7 +131,6 @@ public class Fields {
 			return 2;
 		}
 	}
-	
 	
 	/**
 	 * assigns the value 0 to each field
@@ -128,5 +148,6 @@ public class Fields {
 		for(int i = 0; i < 16; i = i + 4) {
 			System.out.println(field[i]+"\t"+field[i+1]+"\t"+field[i+2]+"\t"+field[i+3]);
 		}
+		System.out.println();
 	}
 }
