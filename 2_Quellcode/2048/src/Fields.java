@@ -1,26 +1,31 @@
 
-public class Steuerung {
+public class Fields {
 
-	static int [] field = new int [16];					//Array contains the values of the fields
-	static int score = 0;
+	int [] field = new int [16];					//Array contains the values of the fields
+	int score = 0;
 	
-	
+	public Fields() {
+		clearFields();
+		System.out.println("This is your empty field");
+		System.out.println();
+		printFields();
+	}
 	
 	/**
 	 * fills a random free field with 2 or 4
 	 * use this method after any move
 	 * increases the score by one 
 	 */
-	public static void fillFieldAfterMove() {
+	public void fillFieldAfterMove() {
 		field[getIndexRandomFreeField()] =  generateNr();
 		score++;
 	}
 	
 	/**
 	 * chooses a random free field
-	 * @return
+	 * @return index
 	 */
-	public static int getIndexRandomFreeField(){
+	private int getIndexRandomFreeField(){
 		int z = 0;
 		do {
 			z = (int) (Math.random() * 20);
@@ -31,10 +36,10 @@ public class Steuerung {
 	/**
 	 * checks whether a field is free
 	 * @param feldIndex
-	 * @return
+	 * @return 
 	 */
-	public static boolean fieldFree(int fieldIndex) {
-		if(field[fieldIndex] == 0) {
+	private boolean fieldFree(int fieldIndex) {
+		if(getValue(fieldIndex) == 0) {
 			return true;
 		} else {
 			return false;
@@ -44,7 +49,7 @@ public class Steuerung {
 	/**
 	 * returns the value of a field
 	 * @param feldIndex
-	 * @return
+	 * @return the value
 	 */
 	public int getValue(int fieldIndex) {
 		int wert = field[fieldIndex]; 						
@@ -52,10 +57,10 @@ public class Steuerung {
 	}
 	
 	/**
-	 * returns 2 or 4 for the next move
-	 * @return
+	 * chooses between 2 and 4
+	 * @return 2 or 4
 	 */
-	public static int generateNr() {
+	private int generateNr() {
 		int nr= (int) (Math.random()*10);
 		if(nr == 0) {
 			return 4;
@@ -68,7 +73,7 @@ public class Steuerung {
 	/**
 	 * assigns the value 0 to each field
 	 */
-	public static void clearFields() {
+	private void clearFields() {
 		for(int i = 0; i <16; i++) {
 			field[i] = 0;
 		}
@@ -77,23 +82,9 @@ public class Steuerung {
 	/**
 	 * gives the value of every field
 	 */
-	public static void printFields() {
+	public void printFields() {
 		for(int i = 0; i < 16; i = i + 4) {
 			System.out.println(field[i]+"\t"+field[i+1]+"\t"+field[i+2]+"\t"+field[i+3]);
 		}
-	}
-		
-	public static void main(String args[]) {	
-		
-		//**************************************************//generate GUI
-		GUI_Menue g1m = new GUI_Menue();					
-		g1m.setVisible(true);
-		//**************************************************
-		
-		clearFields();
-		for(int i = 0; i< 10; i++) {
-			fillFieldAfterMove();
-		}
-		printFields();
 	}
 }
