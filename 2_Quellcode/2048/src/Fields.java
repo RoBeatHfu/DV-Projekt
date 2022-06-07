@@ -123,15 +123,7 @@ public class Fields {
 			return false;
 		}
 	}
-	
-	public int getScore() {
-		int score = 0;
-		for(int i = 0; i < 16; i++) {
-			score = score + getValue(i);
-		}
-		return score;
-	}
-	
+		
 	/**
 	 * returns the value of a field
 	 * @param feldIndex
