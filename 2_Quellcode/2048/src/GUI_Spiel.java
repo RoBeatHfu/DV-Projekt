@@ -145,7 +145,7 @@ public class GUI_Spiel extends javax.swing.JFrame {
         jLabel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jLabel14.setOpaque(true);
-        jLabel14.setBackground(new java.awt.Color(1153, 153, 153));
+        jLabel14.setBackground(new java.awt.Color(153, 153, 153));
         jLabel14.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36)); 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("14");
