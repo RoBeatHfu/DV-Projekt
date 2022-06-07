@@ -23,7 +23,7 @@ public class Fields {
 	
 	/**
 	 * chooses a random free field
-	 * @return
+	 * @return index
 	 */
 	private int getIndexRandomFreeField(){
 		int z = 0;
@@ -36,10 +36,10 @@ public class Fields {
 	/**
 	 * checks whether a field is free
 	 * @param feldIndex
-	 * @return
+	 * @return 
 	 */
 	private boolean fieldFree(int fieldIndex) {
-		if(field[fieldIndex] == 0) {
+		if(getValue(fieldIndex) == 0) {
 			return true;
 		} else {
 			return false;
@@ -49,16 +49,16 @@ public class Fields {
 	/**
 	 * returns the value of a field
 	 * @param feldIndex
-	 * @return
+	 * @return the value
 	 */
-	private int getValue(int fieldIndex) {
+	public int getValue(int fieldIndex) {
 		int wert = field[fieldIndex]; 						
 		return wert;
 	}
 	
 	/**
-	 * returns 2 or 4 for the next move
-	 * @return
+	 * chooses between 2 and 4
+	 * @return 2 or 4
 	 */
 	private int generateNr() {
 		int nr= (int) (Math.random()*10);
