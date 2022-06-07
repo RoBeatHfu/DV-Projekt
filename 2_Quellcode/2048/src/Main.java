@@ -11,10 +11,7 @@ public class Main {
 			f1.fillFieldAfterMove();
 		}
 		f1.printFields();
-		System.out.println(f1.getScore());
-		f1.moveUp('b');
-		f1.printFields();
-		System.out.println(f1.getScore());
-		
+		f1.moveUp('t');
+		f1.printFields();	
 	}
 }
