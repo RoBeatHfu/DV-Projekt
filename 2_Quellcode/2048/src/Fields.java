@@ -35,6 +35,16 @@ public class Fields {
 			
 			break;
 		case 'l':
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 0; i < 3; i++) {
+						if(getValue(i) == 0 && i % 4 != 3) {
+							field[i+k] = field[i+1+k];
+							field[i+1+k] = 0;
+						}
+					}
+				}
+			}
 			break;
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
