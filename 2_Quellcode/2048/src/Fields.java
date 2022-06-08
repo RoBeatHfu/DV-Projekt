@@ -26,7 +26,7 @@ public class Fields {
 			for(int k = 0; k < 4; k++) {
 				for(int j = 0; j < 4; j++) {
 					for(int i = 0+k; i < 12+k; i = i+4) {
-						if(getValue(i) == getValue(i+4)) {
+						if(isFusionable(i, i+4)) {
 							setValue(i, getValue(i)*2);
 							setValue(i+4, 0);
 						}
@@ -38,7 +38,7 @@ public class Fields {
 			for(int k = 0; k < 4; k++) {
 				for(int j = 0; j < 3; j++) {
 					for(int i = 12+k; i > 0+k; i = i-4) {
-						if(getValue(i) == getValue(i-4)) {
+						if(isFusionable(i, i-4)) {
 							setValue(i, getValue(i)*2);
 							setValue(i-4, 0);
 						}
@@ -50,7 +50,7 @@ public class Fields {
 			for(int k = 0; k < 15; k = k+4) {
 				for(int j = 0; j < 3; j++) {
 					for(int i = 0+k; i < 3+k; i++) {
-						if(getValue(i) == getValue(i+1)) {
+						if(isFusionable(i, i+1)) {
 							setValue(i, getValue(i)*2);
 							setValue(i+1, 0);
 						}
@@ -62,7 +62,7 @@ public class Fields {
 			for(int k = 0; k < 15; k = k+4) {
 				for(int j = 0; j < 3; j++) {
 					for(int i = 3+k; i > 0; i--) {
-						if(getValue(i) == getValue(i-1)) {
+						if(isFusionable(i, i-1)) {
 							setValue(i, getValue(i)*2);
 							setValue(i-1, 0);
 						}
