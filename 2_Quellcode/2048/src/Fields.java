@@ -248,4 +248,15 @@ public class Fields {
 		}
 		System.out.println();
 	}
+	
+	private boolean isGameOver() {
+		boolean gameOver = true;
+		for(int i = 0; i < 16; i++) {
+			if(getValue(i) == 0) {
+				gameOver = false;
+			}
+		}
+		return gameOver;
+		
+	}
 }
