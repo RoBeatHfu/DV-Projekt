@@ -1,8 +1,6 @@
-import java.awt.event.KeyEvent;
 
 public class Fields {
 
-	private static final KeyEvent KeyEvent = null;
 	int [] field = new int [16];					//Array contains the values of the fields
 	int score = 0;
 	
@@ -85,7 +83,7 @@ public class Fields {
 	 * and skips all zeroes in this direction
 	 * @param direction 't' 'b' 'l' 'r'
 	 */
-	public void moveUp(char direction) {
+	private void moveUp(char direction) {
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
@@ -144,7 +142,7 @@ public class Fields {
 	 * @param y
 	 * @return
 	 */
-	public boolean isFusionable(int x, int y) {
+	private boolean isFusionable(int x, int y) {
 		if(getValue(x) == getValue(y)) {
 			return true;
 		} else {
@@ -159,7 +157,6 @@ public class Fields {
 	 */
 	private void fillFieldAfterMove() {
 		field[getIndexRandomFreeField()] =  generateNr();
-		score++;
 	}
 	
 	/**
@@ -196,6 +193,7 @@ public class Fields {
 		for(int i = 0; i < 16; i++) {
 			score = score + getValue(i);
 		}
+		System.out.println("Score: " + score);
 		return score;
 	}
 	
