@@ -6,35 +6,132 @@ public class Fields {
 	
 	public Fields() {
 		clearFields();
-		System.out.println("This is your empty field");
+		fillFieldAfterMove();
+		System.out.println("This is your field");
 		System.out.println();
 		printFields();
 	}
 	
 	/**
-	 * doubles the value of x and set y to zero
-	 * @param x
-	 * @param y
+	 * pushes fields to an edge and fusionate two fields with same values together in the opposite direction
+	 * after fusion, it is pushed towards the edge again. 
+	 * Fills a random free field with 2 or 4 
+	 * @param e 
+	 * @param direction
 	 */
-	public void fusion(int x, int y) {
-		field[y] = 0;
-		field[x] = field[x] * 2;
+	public void fusion(char direction) {
+		moveUp(direction);
+		switch (direction) {
+		case 't':
+			for(int k = 0; k < 4; k++) {
+				for(int j = 0; j < 4; j++) {
+					for(int i = 0+k; i < 12+k; i = i+4) {
+						if(getValue(i) == getValue(i+4)) {
+							setValue(i, getValue(i)*2);
+							setValue(i+4, 0);
+						}
+					}
+				}
+			}
+			break;
+		case 'b':
+			for(int k = 0; k < 4; k++) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 12+k; i > 0+k; i = i-4) {
+						if(getValue(i) == getValue(i-4)) {
+							setValue(i, getValue(i)*2);
+							setValue(i-4, 0);
+						}
+					}
+				}
+			}
+			break;
+		case 'l':
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 0+k; i < 3+k; i++) {
+						if(getValue(i) == getValue(i+1)) {
+							setValue(i, getValue(i)*2);
+							setValue(i+1, 0);
+						}
+					}
+				}
+			}
+			break;
+		case 'r':
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 3+k; i > 0; i--) {
+						if(getValue(i) == getValue(i-1)) {
+							setValue(i, getValue(i)*2);
+							setValue(i-1, 0);
+						}
+					}
+				}
+			}
+			break;
+		}
+		moveUp(direction);
+		fillFieldAfterMove();
+		System.out.println("Fusioniert in Richtung " + direction);
+		printFields();
 	}
 	
 	
 	/**
-	 * skips all zeroes in one direction
+	 * moves all fields to the edge in one direction 
+	 * and skips all zeroes in this direction
 	 * @param direction 't' 'b' 'l' 'r'
 	 */
-	public void moveUp(char direction) {
+	private void moveUp(char direction) {
 		switch (direction) {
 		case 't':
+			for(int k = 0; k < 4; k++) {
+				for(int j = 0; j < 4; j++) {
+					for(int i = 0+k; i < 12+k; i = i+4) {
+						if(getValue(i) == 0) {
+							field[i] = field[i+4];
+							field[i+4] = 0;
+						}
+					}
+				}
+			}
 			break;
 		case 'b':
+			for(int k = 0; k < 4; k++) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 12+k; i > 0+k; i = i-4) {
+						if(getValue(i) == 0) {
+							field[i] = field[i-4];
+							field[i-4] = 0;
+						}
+					}
+				}
+			}
 			break;
 		case 'l':
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 0+k; i < 3+k; i++) {
+						if(getValue(i) == 0 && i % 4 != 3) {
+							field[i] = field[i+1];
+							field[i+1] = 0;
+						}
+					}
+				}
+			}
 			break;
 		case 'r':
+			for(int k = 0; k < 15; k = k+4) {
+				for(int j = 0; j < 3; j++) {
+					for(int i = 3+k; i > 0; i--) {
+						if(getValue(i) == 0) {
+							field[i] = field[i-1];
+							field[i-1] = 0;
+						}
+					}
+				}
+			}
 			break;
 		}
 	}
@@ -45,7 +142,7 @@ public class Fields {
 	 * @param y
 	 * @return
 	 */
-	public boolean isFusionable(int x, int y) {
+	private boolean isFusionable(int x, int y) {
 		if(getValue(x) == getValue(y)) {
 			return true;
 		} else {
@@ -58,9 +155,8 @@ public class Fields {
 	 * use this method after any move
 	 * increases the score by one 
 	 */
-	public void fillFieldAfterMove() {
+	private void fillFieldAfterMove() {
 		field[getIndexRandomFreeField()] =  generateNr();
-		score++;
 	}
 	
 	/**
@@ -87,15 +183,37 @@ public class Fields {
 			return false;
 		}
 	}
+
+	/**
+	 * calculates the sum of all fields
+	 * @return score
+	 */
+	public int getScore() {
+		int score = 0;
+		for(int i = 0; i < 16; i++) {
+			score = score + getValue(i);
+		}
+		System.out.println("Score: " + score);
+		return score;
+	}
 	
 	/**
 	 * returns the value of a field
 	 * @param feldIndex
-	 * @return the value
+	 * @return value
 	 */
 	public int getValue(int fieldIndex) {
 		int wert = field[fieldIndex]; 						
 		return wert;
+	}
+	
+	/**
+	 * sets a value into a field
+	 * @param fieldIndex
+	 * @param value
+	 */
+	private void setValue(int fieldIndex, int value) {
+		field[fieldIndex] = value;
 	}
 	
 	/**
@@ -111,7 +229,6 @@ public class Fields {
 		}
 	}
 	
-	
 	/**
 	 * assigns the value 0 to each field
 	 */
@@ -122,11 +239,12 @@ public class Fields {
 	}
 	
 	/**
-	 * gives the value of every field
+	 * prints the value of every field in the console
 	 */
 	public void printFields() {
 		for(int i = 0; i < 16; i = i + 4) {
 			System.out.println(field[i]+"\t"+field[i+1]+"\t"+field[i+2]+"\t"+field[i+3]);
 		}
+		System.out.println();
 	}
 }
