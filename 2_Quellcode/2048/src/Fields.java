@@ -159,6 +159,7 @@ public class Fields {
 		field[getIndexRandomFreeField()] =  generateNr();
 	}
 	
+	
 	/**
 	 * chooses a random free field
 	 * @return index
