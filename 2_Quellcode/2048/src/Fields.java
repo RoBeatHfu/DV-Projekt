@@ -137,7 +137,7 @@ public class Fields {
 	}
 	
 	/**
-	 * checks whether two fields are fusionable
+	 * checks whether two fields have the same value and are fusionable
 	 * @param x
 	 * @param y
 	 * @return
