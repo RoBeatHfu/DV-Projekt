@@ -180,6 +180,7 @@ public class Fields {
 		if(getValue(fieldIndex) == 0) {
 			return true;
 		} else {
+			System.out.println("game over");
 			return false;
 		}
 	}
