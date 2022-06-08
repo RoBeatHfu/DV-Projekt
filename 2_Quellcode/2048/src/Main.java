@@ -7,5 +7,9 @@ public class Main {
 		//*********************************************//generate Fields
 		Fields f1 = new Fields();
 		//*********************************************
+f1.printFields();
+
+		Key_Control.main(f1);
+
 	}
 }
