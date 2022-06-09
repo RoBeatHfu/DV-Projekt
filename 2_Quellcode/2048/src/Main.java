@@ -1,14 +1,15 @@
 public class Main {
 
 	public static void main(String args[]) {
-		// *********************************************//generate GUI
-		GUI_Menue g1 = new GUI_Menue();
-		g1.setVisible(true);
-		// *********************************************//generate Fields
+				// *********************************************//generate Fields
 		Fields f1 = new Fields();
+		
+		// *********************************************//generate GUI
+		GUI_Menue g1 = new GUI_Menue(f1);
+		g1.setVisible(true);
+
 		// *********************************************
 		f1.printFields();
-		Key_Control.main(f1);
-
+		//Key_Control.main(f1);
 	}
 }
