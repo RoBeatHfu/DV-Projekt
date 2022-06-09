@@ -73,7 +73,6 @@ public class Fields {
 		}
 		moveUp(direction);
 		fillFieldAfterMove();
-		System.out.println("Fusioniert in Richtung " + direction);
 		printFields();
 	}
 	
