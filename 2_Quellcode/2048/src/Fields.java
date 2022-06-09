@@ -181,7 +181,6 @@ public class Fields {
 		if(getValue(fieldIndex) == 0) {
 			return true;
 		} else {
-			System.out.println("game over");
 			return false;
 		}
 	}
@@ -248,5 +247,16 @@ public class Fields {
 			System.out.println(field[i]+"\t"+field[i+1]+"\t"+field[i+2]+"\t"+field[i+3]);
 		}
 		System.out.println();
+	}
+	
+	private boolean isGameOver() {
+		boolean gameOver = true;
+		for(int i = 0; i < 16; i++) {
+			if(getValue(i) == 0) {
+				gameOver = false;
+			}
+		}
+		return gameOver;
+		
 	}
 }
