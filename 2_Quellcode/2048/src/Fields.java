@@ -3,6 +3,8 @@ public class Fields {
 
 	int [] field = new int [16];					//Array contains the values of the fields
 	int score = 0;
+	int fusions = 0;
+	boolean isfusible = true;
 	
 	public Fields() {
 		clearFields();
@@ -24,11 +26,19 @@ public class Fields {
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
+				isfusible = true;
+				//fusions = 0;
 				for(int j = 0; j < 4; j++) {
-					for(int i = 0+k; i < 12+k; i = i+4) {
-						if(isFusionable(i, i+4)) {
-							setValue(i, getValue(i)*2);
-							setValue(i+4, 0);
+					if(isfusible /*&& fusions < 2*/) {
+						for(int i = 0+k; i < 12+k; i = i+4) {
+							if(isFusionable(i, i+4) && isfusible) {
+								setValue(i, getValue(i)*2);
+								setValue(i+4, 0);
+								//fusions++;
+								//if(fusions == 2) {
+								//	isfusible = false;
+								//}					
+							}
 						}
 					}
 				}
@@ -36,37 +46,61 @@ public class Fields {
 			break;
 		case 'b':
 			for(int k = 0; k < 4; k++) {
+				isfusible = true;
+				//fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					for(int i = 12+k; i > 0+k; i = i-4) {
-						if(isFusionable(i, i-4)) {
-							setValue(i, getValue(i)*2);
-							setValue(i-4, 0);
+					if(isfusible /*&& fusions < 2*/) {
+						for(int i = 12+k; i > 0+k; i = i-4) {
+							if(isFusionable(i, i-4) && isfusible) {
+								setValue(i, getValue(i)*2);
+								setValue(i-4, 0);
+								//fusions++;
+								//if(fusions == 2) {
+								//	isfusible = false;
+								//}
+							}
 						}
-					}
+					}				
 				}
 			}
 			break;
 		case 'l':
 			for(int k = 0; k < 15; k = k+4) {
+				isfusible = true;
+				//fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					for(int i = 0+k; i < 3+k; i++) {
-						if(isFusionable(i, i+1)) {
-							setValue(i, getValue(i)*2);
-							setValue(i+1, 0);
+					if(isfusible /*&& fusions < 2*/) {
+						for(int i = 0+k; i < 3+k; i++) {
+							if(isFusionable(i, i+1) && isfusible) {
+								setValue(i, getValue(i)*2);
+								setValue(i+1, 0);
+								//fusions++;
+								//if(fusions == 2) {
+								//	isfusible = false;
+								//}
+							}
 						}
-					}
+					}				
 				}
 			}
 			break;
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
+				isfusible = true;
+				//fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					for(int i = 3+k; i > 0; i--) {
-						if(isFusionable(i, i-1)) {
-							setValue(i, getValue(i)*2);
-							setValue(i-1, 0);
+					if(isfusible /*&& fusions < 2*/) {
+						for(int i = 3+k; i > 0; i--) {
+							if(isFusionable(i, i-1) && isfusible) {
+								setValue(i, getValue(i)*2);
+								setValue(i-1, 0);
+								//fusions++;
+								//if(fusions == 2) {
+								//	isfusible = false;
+								//}
+							}
 						}
-					}
+					}		
 				}
 			}
 			break;
@@ -144,6 +178,7 @@ public class Fields {
 	private boolean isFusionable(int x, int y) {
 		if(getValue(x) == getValue(y)) {
 			return true;
+		
 		} else {
 			return false;
 		}
