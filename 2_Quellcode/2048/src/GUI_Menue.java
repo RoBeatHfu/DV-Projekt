@@ -161,7 +161,7 @@ public class GUI_Menue extends javax.swing.JFrame {
 
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new GUI_Menue(tt).setVisible(true);
+                new GUI_Menue().setVisible(true);
             }
         });
     }
