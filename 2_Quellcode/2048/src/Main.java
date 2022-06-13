@@ -1,7 +1,7 @@
 public class Main {
 
 	public static void main(String args[]) {
-				// *********************************************//generate Fields
+		// *********************************************//generate Fields
 		Fields f1 = new Fields();
 		
 		// *********************************************//generate GUI
