@@ -2,9 +2,9 @@
 
 public class GUI_Menue extends javax.swing.JFrame {
 
-    private Fields tt;
-    public GUI_Menue(Fields obj) {
-        this.tt = obj;  //das fields Objekt wird für die für die Steuerung benötigt
+    Fields tt;
+
+    public GUI_Menue() {
         initComponents();
     }
 
@@ -131,7 +131,8 @@ public class GUI_Menue extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed1(java.awt.event.ActionEvent evt) {
         setVisible(false);
-        GUI_Spiel s1 = new GUI_Spiel(tt);
+        GUI_Spiel s1 = new GUI_Spiel();
+        s1.tt = this.tt;
         s1.setVisible(true);
        }
 

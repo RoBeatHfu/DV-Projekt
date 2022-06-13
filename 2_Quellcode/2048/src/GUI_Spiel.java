@@ -4,10 +4,9 @@ import java.awt.event.KeyListener;
 
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
-        private Fields tt;
+        Fields tt;
 
-        public GUI_Spiel(Fields obj) {
-               this.tt = obj;   //das fields Objekt wird für die für die Steuerung benötigt
+        public GUI_Spiel() {
 
                 // refresh des Spielfelds nach jedem Zug!!!
                 initComponents();
@@ -440,7 +439,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
         private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
                 setVisible(false);
-                new GUI_Menue(tt).setVisible(true);
+                new GUI_Menue().setVisible(true);
         }
 
         public static void main(String args[]) {
