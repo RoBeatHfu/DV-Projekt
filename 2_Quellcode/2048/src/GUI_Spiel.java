@@ -384,4 +384,15 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	private javax.swing.JLabel jLabel6;
 	private javax.swing.JLabel jLabel7;
 	private javax.swing.JLabel jLabel8;
+	
+	 public void setValue(int index, int value) {
+		 switch (index) {
+			case 0:	
+				jLabel1.setText(""+value);
+				break;
+			case 1:
+				jLabel2.setText(""+value);
+				break;
+		 }
+	 }
 }
