@@ -1,5 +1,12 @@
 public class Main {
 
+	
+	public static void updateFields(Fields f, GUI_Spiel s) {
+		int value = 0;
+		for(int i = 0; i <= 15; i++) {
+			
+		}	
+	}
 	public static void main(String args[]) {
 		// *********************************************//generate Fields
 		Fields f1 = new Fields();
