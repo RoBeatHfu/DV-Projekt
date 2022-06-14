@@ -107,7 +107,6 @@ public class Fields {
 		moveUp(direction);
 		fillFieldAfterMove();
 		printFields();
-		//updateFields(this, null);
 	}
 	
 	
@@ -291,12 +290,5 @@ public class Fields {
 			}
 		}
 		return gameOver;
-	}
-	
-	public static void updateFields(Fields f, GUI_Spiel s) {
-		int value = 0;
-		for(int i = 0; i <= 15; i++) {
-			s.setValue(i,f.getValue(i));
-		}	
 	}
 }
