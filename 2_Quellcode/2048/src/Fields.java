@@ -18,7 +18,6 @@ public class Fields {
 	 * pushes fields to an edge and fusionate two fields with same values together in the opposite direction
 	 * after fusion, it is pushed towards the edge again. 
 	 * Fills a random free field with 2 or 4 
-	 * @param e 
 	 * @param direction
 	 */
 	public void fusion(char direction) {
@@ -108,6 +107,7 @@ public class Fields {
 		moveUp(direction);
 		fillFieldAfterMove();
 		printFields();
+		//updateFields(this, null);
 	}
 	
 	
@@ -291,6 +291,12 @@ public class Fields {
 			}
 		}
 		return gameOver;
-		
+	}
+	
+	public static void updateFields(Fields f, GUI_Spiel s) {
+		int value = 0;
+		for(int i = 0; i <= 15; i++) {
+			s.setValue(i,f.getValue(i));
+		}	
 	}
 }
