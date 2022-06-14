@@ -4,7 +4,7 @@ public class Fields {
 	int [] field = new int [16];					//Array contains the values of the fields
 	int score = 0;
 	int fusions = 0;
-	boolean isfusible = true;
+	boolean isFusible = true;
 	
 	public Fields() {
 		clearFields();
@@ -26,17 +26,17 @@ public class Fields {
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
-				isfusible = true;
+				isFusible = true;
 				fusions = 0;
 				for(int j = 0; j < 4; j++) {
-					if(isfusible && fusions < 2) {
+					if(isFusible && fusions < 2) {
 						for(int i = 0+k; i < 12+k; i = i+4) {
-							if(isFusionable(i, i+4) && isfusible) {
+							if(isFusionable(i, i+4) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i+4, 0);
 								fusions++;
 								if(fusions == 2) {
-									isfusible = false;
+									isFusible = false;
 								}					
 							}
 						}
@@ -46,17 +46,17 @@ public class Fields {
 			break;
 		case 'b':
 			for(int k = 0; k < 4; k++) {
-				isfusible = true;
+				isFusible = true;
 				fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					if(isfusible && fusions < 2) {
+					if(isFusible && fusions < 2) {
 						for(int i = 12+k; i > 0+k; i = i-4) {
-							if(isFusionable(i, i-4) && isfusible) {
+							if(isFusionable(i, i-4) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i-4, 0);
 								fusions++;
 								if(fusions == 2) {
-									isfusible = false;
+									isFusible = false;
 								}
 							}
 						}
@@ -66,17 +66,17 @@ public class Fields {
 			break;
 		case 'l':
 			for(int k = 0; k < 15; k = k+4) {
-				isfusible = true;
+				isFusible = true;
 				fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					if(isfusible && fusions < 2) {
+					if(isFusible && fusions < 2) {
 						for(int i = 0+k; i < 3+k; i++) {
-							if(isFusionable(i, i+1) && isfusible) {
+							if(isFusionable(i, i+1) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i+1, 0);
 								fusions++;
 								if(fusions == 2) {
-									isfusible = false;
+									isFusible = false;
 								}
 							}
 						}
@@ -86,17 +86,17 @@ public class Fields {
 			break;
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
-				isfusible = true;
+				isFusible = true;
 				fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					if(isfusible && fusions < 2) {
+					if(isFusible && fusions < 2) {
 						for(int i = 3+k; i > 0; i--) {
-							if(isFusionable(i, i-1) && isfusible) {
+							if(isFusionable(i, i-1) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i-1, 0);
 								fusions++;
 								if(fusions == 2) {
-								isfusible = false;
+								isFusible = false;
 								}
 							}
 						}
