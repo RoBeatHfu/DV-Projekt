@@ -1,12 +1,13 @@
 public class Main {
 
 	
-	public static void updateFields(Fields f, GUI_Spiel s) {
+	public static void updateFields(Fields f, GUI_Menue m) {
 		int value = 0;
 		for(int i = 0; i <= 15; i++) {
-			
+			m.setValue(i,f.getValue(i));
 		}	
 	}
+	
 	public static void main(String args[]) {
 		// *********************************************//generate Fields
 		Fields f1 = new Fields();
