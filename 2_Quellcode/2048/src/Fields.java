@@ -25,41 +25,41 @@ public class Fields {
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
-				isFusible = true;
-				fusions = 0;
+				//isFusible = true;
+				//fusions = 0;
 				for(int j = 0; j < 4; j++) {
-					if(isFusible && fusions < 2) {
+					//if(isFusible && fusions < 2) {
 						for(int i = 0+k; i < 12+k; i = i+4) {
 							if(isFusionable(i, i+4) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i+4, 0);
-								fusions++;
-								if(fusions == 2) {
-									isFusible = false;
-								}					
+								//fusions++;
+								//if(fusions == 2) {
+								//	isFusible = false;
+								//}					
 							}
-						}
+						//}
 					}
 				}
 			}
 			break;
 		case 'b':
 			for(int k = 0; k < 4; k++) {
-				isFusible = true;
-				fusions = 0;
+				//isFusible = true;
+				//fusions = 0;
 				for(int j = 0; j < 3; j++) {
-					if(isFusible && fusions < 2) {
+					//if(isFusible && fusions < 2) {
 						for(int i = 12+k; i > 0+k; i = i-4) {
 							if(isFusionable(i, i-4) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i-4, 0);
-								fusions++;
-								if(fusions == 2) {
-									isFusible = false;
-								}
+								//fusions++;
+								//if(fusions == 2) {
+								//	isFusible = false;
+								//}
 							}
 						}
-					}				
+					//}				
 				}
 			}
 			break;
