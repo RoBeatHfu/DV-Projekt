@@ -1,10 +1,10 @@
 public class Main {
 
 	
-	public static void updateFields(Fields f, GUI_Menue m) {
+	public static void updateFields(Fields f, GUI_Spiel s) {
 		int value = 0;
 		for(int i = 0; i <= 15; i++) {
-			m.setValue(i,f.getValue(i));
+			s.setValue(i,f.getValue(i));
 		}	
 	}
 	
