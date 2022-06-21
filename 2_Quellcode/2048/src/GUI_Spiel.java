@@ -5,9 +5,9 @@ import java.awt.event.KeyListener;
 
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
-        Fields tt;
+	Fields tt;
 
-        public GUI_Spiel() {
+	public GUI_Spiel() {
 
 		// refresh des Spielfelds nach jedem Zug!!!
 		initComponents();
@@ -333,10 +333,10 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		pack();
 	}
 
-        private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-                setVisible(false);
-                new GUI_Menue().setVisible(true);
-        }
+	private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+		setVisible(false);
+		new GUI_Menue().setVisible(true);
+	}
 
 	public static void main(String args[]) {
 
@@ -384,57 +384,57 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	private javax.swing.JLabel jLabel6;
 	private javax.swing.JLabel jLabel7;
 	private javax.swing.JLabel jLabel8;
-	
-	 public void setValue(int index, int value) {
-		 switch (index) {
-			case 0:	
-				jLabel1.setText(""+value);
-				break;
-			case 1:
-				jLabel2.setText(""+value);
-				break;
-			case 2:
-				jLabel3.setText(""+value);
-				break;
-			case 3:
-				jLabel4.setText(""+value);
-				break;
-			case 4:
-				jLabel5.setText(""+value);
-				break;
-			case 5:
-				jLabel6.setText(""+value);
-				break;
-			case 6:
-				jLabel7.setText(""+value);
-				break;
-			case 7:
-				jLabel8.setText(""+value);
-				break;
-			case 8:
-				jLabel9.setText(""+value);
-				break;
-			case 9:
-				jLabel10.setText(""+value);
-				break;
-			case 10:
-				jLabel11.setText(""+value);
-				break;
-			case 11:
-				jLabel12.setText(""+value);
-				break;
-			case 12:
-				jLabel13.setText(""+value);
-				break;
-			case 13:
-				jLabel14.setText(""+value);
-				break;
-			case 14:
-				jLabel15.setText(""+value);
-				break;
-			case 15:
-				jLabel16.setText(""+value);
-				break;
-		 }
-	 }
+
+	public void setValue(int index, int value) {
+		switch (index) {
+		case 0:
+			jLabel1.setText("" + value);
+			break;
+		case 1:
+			jLabel2.setText("" + value);
+			break;
+		case 2:
+			jLabel3.setText("" + value);
+			break;
+		case 3:
+			jLabel4.setText("" + value);
+			break;
+		case 4:
+			jLabel5.setText("" + value);
+			break;
+		case 5:
+			jLabel6.setText("" + value);
+			break;
+		case 6:
+			jLabel7.setText("" + value);
+			break;
+		case 7:
+			jLabel8.setText("" + value);
+			break;
+		case 8:
+			jLabel9.setText("" + value);
+			break;
+		case 9:
+			jLabel10.setText("" + value);
+			break;
+		case 10:
+			jLabel11.setText("" + value);
+			break;
+		case 11:
+			jLabel12.setText("" + value);
+			break;
+		case 12:
+			jLabel13.setText("" + value);
+			break;
+		case 13:
+			jLabel14.setText("" + value);
+			break;
+		case 14:
+			jLabel15.setText("" + value);
+			break;
+		case 15:
+			jLabel16.setText("" + value);
+			break;
+		}
+	}
 }
