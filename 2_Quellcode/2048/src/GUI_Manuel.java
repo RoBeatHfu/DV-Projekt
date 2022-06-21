@@ -9,9 +9,9 @@ public class GUI_Manuel extends javax.swing.JFrame {
 	private void initComponents() {
 		
 	
-		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		setTitle("2048 Manuel");
-		setLocation(new java.awt.Point(600, 0));
+		setLocation(new java.awt.Point(200, 100));
 		setName("2048 Manuel");
 		setPreferredSize(new java.awt.Dimension(620, 620));
 		setResizable(false);
