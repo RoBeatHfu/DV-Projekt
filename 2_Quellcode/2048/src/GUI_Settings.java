@@ -71,7 +71,7 @@ public class GUI_Settings extends javax.swing.JFrame {
         pack();
     }     
     
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) { 
     	new GUI_Manuel().setVisible(true);
     }                                        
 
