@@ -12,7 +12,7 @@ public class GUI_Settings extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+       // jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -30,7 +30,7 @@ public class GUI_Settings extends javax.swing.JFrame {
         jButton1.setText("Manuel");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -72,7 +72,7 @@ public class GUI_Settings extends javax.swing.JFrame {
     }     
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-    	new GUI_Menue().setVisible(true);
+    	new GUI_Manuel().setVisible(true);
     }                                        
 
 
@@ -109,7 +109,7 @@ public class GUI_Settings extends javax.swing.JFrame {
     }
     
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+   // private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
                 
