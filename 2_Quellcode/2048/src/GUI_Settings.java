@@ -27,7 +27,7 @@ public class GUI_Settings extends javax.swing.JFrame {
         
         jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12)); 
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
-        jButton1.setText("Manuel");
+        jButton1.setText("Manual");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
