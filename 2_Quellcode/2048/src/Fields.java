@@ -2,6 +2,7 @@
 public class Fields {
 
 	int [] field = new int [16];					//Array contains the values of the fields
+	int [] oldField = new int [16];
 	int score = 0;
 	int fusions = 0;
 	boolean isFusible = true;
@@ -23,6 +24,9 @@ public class Fields {
 	 */
 	public void fusion(char direction) {
 		moveUp(direction);
+		for(int i = 0; i < 16; i++) {
+			oldField[i] = field[i];
+		}
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
@@ -78,6 +82,7 @@ public class Fields {
 	 */
 	private boolean moveUp(char direction) {
 		boolean hasMoved = false;
+		
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
@@ -86,7 +91,6 @@ public class Fields {
 						if(getValue(i) == 0) {
 							field[i] = field[i+4];
 							field[i+4] = 0;
-							hasMoved = true;
 						}
 					}
 				}
@@ -99,7 +103,6 @@ public class Fields {
 						if(getValue(i) == 0) {
 							field[i] = field[i-4];
 							field[i-4] = 0;
-							hasMoved = true;
 						}
 					}
 				}
@@ -112,7 +115,6 @@ public class Fields {
 						if(getValue(i) == 0 && i % 4 != 3) {
 							field[i] = field[i+1];
 							field[i+1] = 0;
-							hasMoved = true;
 						}
 					}
 				}
@@ -125,12 +127,16 @@ public class Fields {
 						if(getValue(i) == 0) {
 							field[i] = field[i-1];
 							field[i-1] = 0;
-							hasMoved = true;
 						}
 					}
 				}
 			}
 			break;
+		}
+		for(int i = 0; i < 16; i++) {
+			if(oldField[i] != field[i]) {
+				hasMoved = true;
+			}
 		}
 		return hasMoved;
 	}
