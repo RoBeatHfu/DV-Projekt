@@ -7,8 +7,8 @@ import java.awt.event.KeyListener;
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 	Fields fieldSpiel;
-	int punkte = fieldSpiel.getScore(); 
-	int feld1 = fieldSpiel.getValue(0);
+	int punkte;
+	int feld1;
 
 	public GUI_Spiel() {
 
@@ -19,7 +19,8 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
-		
+		punkte = fieldSpiel.getScore(); 
+		feld1 = fieldSpiel.getValue(0);
 	}
 
 	// Überschreibt die Tastatureingaben Verarbeitung
