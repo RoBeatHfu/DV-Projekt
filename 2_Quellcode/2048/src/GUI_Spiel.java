@@ -65,21 +65,22 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		}
 		setValue(16, fieldSpiel.getScore());
 		fieldSpiel.getScore();
-		jLabel1.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel4.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel6.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel7.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel8.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel9.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel10.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel11.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel12.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel13.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel14.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel15.setBackground((new java.awt.Color(153, 153, 153)));
-		jLabel16.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel1.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(0)), setColorG(fieldSpiel.getValue(0)), setColorB(fieldSpiel.getValue(0)))));
+		jLabel2.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(1)), setColorG(fieldSpiel.getValue(1)), setColorB(fieldSpiel.getValue(1)))));
+		jLabel3.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(2)), setColorG(fieldSpiel.getValue(2)), setColorB(fieldSpiel.getValue(2)))));
+		jLabel4.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(3)), setColorG(fieldSpiel.getValue(3)), setColorB(fieldSpiel.getValue(3)))));
+		jLabel5.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(4)), setColorG(fieldSpiel.getValue(4)), setColorB(fieldSpiel.getValue(4)))));
+		jLabel6.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(5)), setColorG(fieldSpiel.getValue(5)), setColorB(fieldSpiel.getValue(5)))));
+		jLabel7.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(6)), setColorG(fieldSpiel.getValue(6)), setColorB(fieldSpiel.getValue(6)))));
+		jLabel8.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(7)), setColorG(fieldSpiel.getValue(7)), setColorB(fieldSpiel.getValue(7)))));
+		jLabel9.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(8)), setColorG(fieldSpiel.getValue(8)), setColorB(fieldSpiel.getValue(8)))));
+		jLabel10.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(9)), setColorG(fieldSpiel.getValue(9)), setColorB(fieldSpiel.getValue(9)))));
+		jLabel11.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(10)), setColorG(fieldSpiel.getValue(10)), setColorB(fieldSpiel.getValue(10)))));
+		jLabel12.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(11)), setColorG(fieldSpiel.getValue(11)), setColorB(fieldSpiel.getValue(11)))));
+		jLabel13.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(12)), setColorG(fieldSpiel.getValue(12)), setColorB(fieldSpiel.getValue(12)))));
+		jLabel14.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(13)), setColorG(fieldSpiel.getValue(13)), setColorB(fieldSpiel.getValue(13)))));
+		jLabel15.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(14)), setColorG(fieldSpiel.getValue(14)), setColorB(fieldSpiel.getValue(14)))));
+		jLabel16.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(15)), setColorG(fieldSpiel.getValue(15)), setColorB(fieldSpiel.getValue(15)))));
 	}
 
 	// Die Methode muss auch aufgeführt sein
@@ -470,34 +471,150 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		}
 	}
 	
-	private void setColor(int value) {
+	private int setColorR(int value) {
+		int color = 0;
 		switch(value) {
 		case 0:
+			color = 155;
 			break;
 		case 2:
+			color = 138;
 			break;
 		case 4:
+			color = 120;
 			break;
 		case 8:
+			color = 101;
 			break;
 		case 16:
+			color = 83;
 			break;
 		case 32:
+			color = 68;
 			break;
 		case 64:
+			color = 55;
 			break;
 		case 128:
+			color = 42;
 			break;
 		case 256:
+			color = 31;
 			break;
 		case 512:
+			color = 22;
 			break;
 		case 1024:
+			color = 13;
 			break;
 		case 2048:
+			color = 6;
 			break;
 		case 4098:
+			color = 0;
+			break;
+		default:
+			System.out.println("sorry, you are too good we have no more colors ;)");
 			break;
 		}
+		return color;
+	}
+	
+	private int setColorG(int value) {
+		int color = 0;
+		switch(value) {
+		case 0:
+			color = 155;
+			break;
+		case 2:
+			color = 156;
+			break;
+		case 4:
+			color = 159;
+			break;
+		case 8:
+			color = 163;
+			break;
+		case 16:
+			color = 166;
+			break;
+		case 32:
+			color = 165;
+			break;
+		case 64:
+			color = 163;
+			break;
+		case 128:
+			color = 160;
+			break;
+		case 256:
+			color = 156;
+			break;
+		case 512:
+			color = 151;
+			break;
+		case 1024:
+			color = 144;
+			break;
+		case 2048:
+			color = 135;
+			break;
+		case 4098:
+			color = 126;
+			break;
+		default:
+			System.out.println("sorry, you are too good we have no more colors ;)");
+			break;
+		}
+		return color;
+	}
+	
+	private int setColorB(int value) {
+		int color = 0;
+		switch(value) {
+		case 0:
+			color = 155;
+			break;
+		case 2:
+			color = 150;
+			break;
+		case 4:
+			color = 145;
+			break;
+		case 8:
+			color = 141;
+			break;
+		case 16:
+			color = 137;
+			break;
+		case 32:
+			color = 131;
+			break;
+		case 64:
+			color = 125;
+			break;
+		case 128:
+			color = 119;
+			break;
+		case 256:
+			color = 112;
+			break;
+		case 512:
+			color = 105;
+			break;
+		case 1024:
+			color = 98;
+			break;
+		case 2048:
+			color = 90;
+			break;
+		case 4098:
+			color = 82;
+			break;
+		default:
+			System.out.println("sorry, you are too good we have no more colors ;)");
+			break;
+		}
+		return color;
 	}
 }
