@@ -9,6 +9,7 @@ public class Fields {
 	public Fields() {
 		clearFields();
 		fillFieldAfterMove();
+		fillFieldAfterMove();
 		System.out.println("This is your field");
 		System.out.println();
 		printFields();
@@ -26,8 +27,7 @@ public class Fields {
 		}
 		printFields();
 	}
-	
-	
+		
 	/**
 	 * moves all fields to the edge in one direction 
 	 * and skips all zeroes in this direction
