@@ -8,6 +8,7 @@ public class Fields {
 	boolean hasMoved = false;
 	
 	public Fields() {
+		System.out.println("Fields");
 		clearFields();
 		fillFieldAfterMove();
 		fillFieldAfterMove();
