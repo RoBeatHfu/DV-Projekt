@@ -21,91 +21,9 @@ public class Fields {
 	 * @param direction
 	 */
 	public void fusion(char direction) {
-		moveUp(direction);
-		switch (direction) {
-		case 't':
-			for(int k = 0; k < 4; k++) {
-				//isFusible = true;
-				//fusions = 0;
-				for(int j = 0; j < 4; j++) {
-					//if(isFusible && fusions < 2) {
-						for(int i = 0+k; i < 12+k; i = i+4) {
-							if(isFusionable(i, i+4) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i+4, 0);
-								//fusions++;
-								//if(fusions == 2) {
-								//	isFusible = false;
-								//}					
-							}
-						//}
-					}
-				}
-			}
-			break;
-		case 'b':
-			for(int k = 0; k < 4; k++) {
-				//isFusible = true;
-				//fusions = 0;
-				for(int j = 0; j < 3; j++) {
-					//if(isFusible && fusions < 2) {
-						for(int i = 12+k; i > 0+k; i = i-4) {
-							if(isFusionable(i, i-4) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i-4, 0);
-								//fusions++;
-								//if(fusions == 2) {
-								//	isFusible = false;
-								//}
-							}
-						}
-					//}				
-				}
-			}
-			break;
-		case 'l':
-			for(int k = 0; k < 15; k = k+4) {
-				isFusible = true;
-				fusions = 0;
-				for(int j = 0; j < 3; j++) {
-					if(isFusible && fusions < 2) {
-						for(int i = 0+k; i < 3+k; i++) {
-							if(isFusionable(i, i+1) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i+1, 0);
-								fusions++;
-								if(fusions == 2) {
-									isFusible = false;
-								}
-							}
-						}
-					}				
-				}
-			}
-			break;
-		case 'r':
-			for(int k = 0; k < 15; k = k+4) {
-				isFusible = true;
-				fusions = 0;
-				for(int j = 0; j < 3; j++) {
-					if(isFusible && fusions < 2) {
-						for(int i = 3+k; i > 0; i--) {
-							if(isFusionable(i, i-1) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i-1, 0);
-								fusions++;
-								if(fusions == 2) {
-								isFusible = false;
-								}
-							}
-						}
-					}		
-				}
-			}
-			break;
+		if(moveUp(direction)) {
+			fillFieldAfterMove();
 		}
-		moveUp(direction);
-		fillFieldAfterMove();
 		printFields();
 	}
 	
@@ -114,8 +32,10 @@ public class Fields {
 	 * moves all fields to the edge in one direction 
 	 * and skips all zeroes in this direction
 	 * @param direction 't' 'b' 'l' 'r'
+	 * @return whether it was possible to move
 	 */
-	private void moveUp(char direction) {
+	private boolean moveUp(char direction) {
+		boolean hasMoved = false;
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
@@ -124,6 +44,7 @@ public class Fields {
 						if(getValue(i) == 0) {
 							field[i] = field[i+4];
 							field[i+4] = 0;
+							hasMoved = true;
 						}
 					}
 				}
@@ -136,6 +57,7 @@ public class Fields {
 						if(getValue(i) == 0) {
 							field[i] = field[i-4];
 							field[i-4] = 0;
+							hasMoved = true;
 						}
 					}
 				}
@@ -148,6 +70,7 @@ public class Fields {
 						if(getValue(i) == 0 && i % 4 != 3) {
 							field[i] = field[i+1];
 							field[i+1] = 0;
+							hasMoved = true;
 						}
 					}
 				}
@@ -156,16 +79,18 @@ public class Fields {
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
 				for(int j = 0; j < 3; j++) {
-					for(int i = 3+k; i > 0; i--) {
+					for(int i = 3+k; i > k; i--) {
 						if(getValue(i) == 0) {
 							field[i] = field[i-1];
 							field[i-1] = 0;
+							hasMoved = true;
 						}
 					}
 				}
 			}
 			break;
 		}
+		return hasMoved;
 	}
 	
 	/**
