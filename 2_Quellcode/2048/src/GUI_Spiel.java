@@ -6,6 +6,8 @@ import java.awt.event.KeyListener;
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 	Fields tt;
+	int Punkte = Fields.getScore(); 
+	int Feld1 = getValue(0);
 
 	public GUI_Spiel() {
 
@@ -98,7 +100,8 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		jLabel1.setBackground(new java.awt.Color(153, 153, 153));
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36));
 		jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabel1.setText("0");// jLabel1.setText(""+field[0]);
+		//jLabel1.setText("0");
+		jLabel1.setText(""+Feld1);
 		jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
 		jLabel2.setOpaque(true);
@@ -208,7 +211,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 		jLabelScore.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18));
 		jLabelScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabelScore.setText("...Punkte");
+		jLabelScore.setText(""+Punkte);
 		jLabelScore.setToolTipText("");
 		jLabelScore.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SCORE",
 				javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP,

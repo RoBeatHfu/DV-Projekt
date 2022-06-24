@@ -1,17 +1,17 @@
 /******* Adrian ******/
 
-public class GUI_Manuel extends javax.swing.JFrame {
+public class GUI_Manual extends javax.swing.JFrame {
 
-	public GUI_Manuel() {
+	public GUI_Manual() {
 		initComponents();
 	}
 
 	private void initComponents() {
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-		setTitle("2048 Manuel");
+		setTitle("2048 Manual");
 		setLocation(new java.awt.Point(200, 100));
-		setName("2048 Manuel");
+		setName("2048 Manual");
 		setPreferredSize(new java.awt.Dimension(620, 620));
 		setResizable(false);
 
@@ -71,22 +71,22 @@ public class GUI_Manuel extends javax.swing.JFrame {
 				}
 			}
 		} catch (ClassNotFoundException ex) {
-			java.util.logging.Logger.getLogger(GUI_Manuel.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(GUI_Manual.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		} catch (InstantiationException ex) {
-			java.util.logging.Logger.getLogger(GUI_Manuel.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(GUI_Manual.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		} catch (IllegalAccessException ex) {
-			java.util.logging.Logger.getLogger(GUI_Manuel.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(GUI_Manual.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
-			java.util.logging.Logger.getLogger(GUI_Manuel.class.getName()).log(java.util.logging.Level.SEVERE, null,
+			java.util.logging.Logger.getLogger(GUI_Manual.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		}
 
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				new GUI_Manuel().setVisible(true);
+				new GUI_Manual().setVisible(true);
 			}
 		});
 	}
