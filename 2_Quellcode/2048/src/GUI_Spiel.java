@@ -6,9 +6,9 @@ import java.awt.event.KeyListener;
 
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
-	Fields tt;
-	int Punkte = tt.getScore(); 
-	int Feld1 = tt.getValue(0);
+	Fields fieldSpiel;
+	int punkte = fieldSpiel.getScore(); 
+	int feld1 = fieldSpiel.getValue(0);
 
 	public GUI_Spiel() {
 
@@ -19,6 +19,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
+		
 	}
 
 	// Überschreibt die Tastatureingaben Verarbeitung
@@ -26,19 +27,19 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 			System.out.println("Moving Right");
-			tt.fusion('r');
+			fieldSpiel.fusion('r');
 		}
 		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			System.out.println("Moving Left");
-			tt.fusion('l');
+			fieldSpiel.fusion('l');
 		}
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			System.out.println("Moving Down");
-			tt.fusion('b');
+			fieldSpiel.fusion('b');
 		}
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
 			System.out.println("Moving Up");
-			tt.fusion('t');
+			fieldSpiel.fusion('t');
 		}
 		System.out.println();
 
@@ -102,7 +103,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36));
 		jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		//jLabel1.setText("0");
-		jLabel1.setText(""+Feld1);
+		jLabel1.setText(""+feld1);
 		jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
 		jLabel2.setOpaque(true);
@@ -212,7 +213,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 		jLabelScore.setFont(new java.awt.Font("Arial Rounded MT Bold", 1, 18));
 		jLabelScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabelScore.setText(""+Punkte);
+		jLabelScore.setText(""+punkte);
 		jLabelScore.setToolTipText("");
 		jLabelScore.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "SCORE",
 				javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.TOP,
