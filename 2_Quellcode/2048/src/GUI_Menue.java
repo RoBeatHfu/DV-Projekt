@@ -1,4 +1,11 @@
+
 /******* Adrian ******/
+
+import java.awt.Point;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.prefs.Preferences;
+
 
 public class GUI_Menue extends javax.swing.JFrame {
 
@@ -20,6 +27,7 @@ public class GUI_Menue extends javax.swing.JFrame {
 	}
 
 	private void initComponents() {
+		
 
 		jLabel1 = new javax.swing.JLabel(); // 2048
 		// jLabel2 = new javax.swing.JLabel();
@@ -31,10 +39,13 @@ public class GUI_Menue extends javax.swing.JFrame {
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		setTitle("2048 Menue");
 		setLocation(new java.awt.Point(0, 0));
+	//setLocation(new java.awt.Point(x));
 		setName("2048");
 		setPreferredSize(new java.awt.Dimension(400, 500));
 		setResizable(false);
 		setType(java.awt.Window.Type.POPUP);
+		
+    //Point x = getLocationOnScreen();
 
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80));
 		jLabel1.setForeground(new java.awt.Color(0, 136, 82));
