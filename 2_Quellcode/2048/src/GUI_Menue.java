@@ -10,12 +10,12 @@ public class GUI_Menue extends javax.swing.JFrame {
 
 	private void initComponents() {
 
-		jButton1 = new javax.swing.JButton(); // Spiel starten
 		jLabel1 = new javax.swing.JLabel(); // 2048
 		// jLabel2 = new javax.swing.JLabel();
-		jButton2 = new javax.swing.JButton(); // Highscoreliste �ffnen
-		jButton3 = new javax.swing.JButton(); // Einstellungen �ffnen
-		jButton4 = new javax.swing.JButton(); // Anwendung schlie�en
+		jButtonPlay = new javax.swing.JButton(); // Spiel starten
+		jButtonHighscore = new javax.swing.JButton(); // Highscoreliste �ffnen
+		jButtonSettings = new javax.swing.JButton(); // Einstellungen �ffnen
+		jButtonQuit = new javax.swing.JButton(); // Anwendung schlie�en
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		setTitle("2048 Menue");
@@ -24,21 +24,7 @@ public class GUI_Menue extends javax.swing.JFrame {
 		setPreferredSize(new java.awt.Dimension(400, 500));
 		setResizable(false);
 		setType(java.awt.Window.Type.POPUP);
-
-		jButton1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36));
-		jButton1.setText("Play");
-		jButton1.setBackground(new java.awt.Color(0, 136, 82));
-		jButton1.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButton1ActionPerformed1(evt);
-			}
-		});
-		jButton1.addKeyListener(new java.awt.event.KeyAdapter() {
-			public void keyPressed(java.awt.event.KeyEvent evt) {
-				keyPressed(evt);
-			}
-		});
-
+		
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80));
 		jLabel1.setForeground(new java.awt.Color(0, 136, 82));
 		jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -47,30 +33,47 @@ public class GUI_Menue extends javax.swing.JFrame {
 		// jLabel2.setIcon(new
 		// javax.swing.ImageIcon("https://github.com/RoBeatHfu/DV-Projekt/blob/main/1_Projektskizze/images/background.png"));
 
-		jButton2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
-		jButton2.setText("Highscore");
-		jButton2.setBackground(new java.awt.Color(153, 153, 153));
-		jButton2.addActionListener(new java.awt.event.ActionListener() {
+
+		jButtonPlay.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36));
+		jButtonPlay.setText("Play");
+		jButtonPlay.setBackground(new java.awt.Color(0, 136, 82));
+		jButtonPlay.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButton2ActionPerformed(evt);
+				jButtonPlayActionPerformed1(evt);
+			}
+		});
+		
+		jButtonPlay.addKeyListener(new java.awt.event.KeyAdapter() {
+			public void keyPressed(java.awt.event.KeyEvent evt) {
+				keyPressed(evt);
 			}
 		});
 
-		jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
-		jButton3.setText("Settings");
-		jButton3.setBackground(new java.awt.Color(153, 153, 153));
-		jButton3.addActionListener(new java.awt.event.ActionListener() {
+	
+		jButtonHighscore.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
+		jButtonHighscore.setText("Highscore");
+		jButtonHighscore.setBackground(new java.awt.Color(153, 153, 153));
+		jButtonHighscore.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButton3ActionPerformed(evt);
+				jButtonHighscoreActionPerformed(evt);
 			}
 		});
 
-		jButton4.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
-		jButton4.setText("Quit");
-		jButton4.setBackground(new java.awt.Color(153, 153, 153));
-		jButton4.addActionListener(new java.awt.event.ActionListener() {
+		jButtonSettings.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
+		jButtonSettings.setText("Settings");
+		jButtonSettings.setBackground(new java.awt.Color(153, 153, 153));
+		jButtonSettings.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButton4ActionPerformed(evt);
+				jButtonSettingsActionPerformed(evt);
+			}
+		});
+
+		jButtonQuit.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
+		jButtonQuit.setText("Quit");
+		jButtonQuit.setBackground(new java.awt.Color(153, 153, 153));
+		jButtonQuit.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				jButtonQuitActionPerformed(evt);
 			}
 		});
 
@@ -79,13 +82,13 @@ public class GUI_Menue extends javax.swing.JFrame {
 		layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addGroup(layout.createSequentialGroup().addContainerGap()
 						.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-								.addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
+								.addComponent(jButtonQuit, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
+								.addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
+								.addComponent(jButtonHighscore, javax.swing.GroupLayout.PREFERRED_SIZE, 140,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
-								.addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 180,
+								.addComponent(jButtonPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 180,
 										javax.swing.GroupLayout.PREFERRED_SIZE)
 								// .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1,
 								// javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -99,40 +102,40 @@ public class GUI_Menue extends javax.swing.JFrame {
 				.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 				// .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 117,
 				// javax.swing.GroupLayout.PREFERRED_SIZE)
-				.addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60,
+				.addComponent(jButtonPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 60,
 						javax.swing.GroupLayout.PREFERRED_SIZE)
 				.addGap(18, 18, 18)
-				.addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
+				.addComponent(jButtonHighscore, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
 						javax.swing.GroupLayout.PREFERRED_SIZE)
 				.addGap(18, 18, 18)
-				.addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
+				.addComponent(jButtonSettings, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
 						javax.swing.GroupLayout.PREFERRED_SIZE)
 				.addGap(18, 18, 18)
-				.addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
+				.addComponent(jButtonQuit, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
 						javax.swing.GroupLayout.PREFERRED_SIZE)
 				.addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
 		pack();
 	}
 
-	private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+	private void jButtonSettingsActionPerformed(java.awt.event.ActionEvent evt) {
 		setVisible(false);
 		new GUI_Settings().setVisible(true);
 
 	}
 
-	private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {
+	private void jButtonQuitActionPerformed(java.awt.event.ActionEvent evt) {
 		System.exit(0);
 	}
 
-	private void jButton1ActionPerformed1(java.awt.event.ActionEvent evt) {
+	private void jButtonPlayActionPerformed1(java.awt.event.ActionEvent evt) {
 		setVisible(false);
 		GUI_Spiel s1 = new GUI_Spiel();
 		s1.fieldSpiel = tt;
 		s1.setVisible(true);
 	}
 
-	private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {
+	private void jButtonHighscoreActionPerformed(java.awt.event.ActionEvent evt) {
 
 	}
 
@@ -162,10 +165,10 @@ public class GUI_Menue extends javax.swing.JFrame {
 		});
 	}
 
-	private javax.swing.JButton jButton1;
-	private javax.swing.JButton jButton2;
-	private javax.swing.JButton jButton3;
-	private javax.swing.JButton jButton4;
+	private javax.swing.JButton jButtonPlay;
+	private javax.swing.JButton jButtonHighscore;
+	private javax.swing.JButton jButtonSettings;
+	private javax.swing.JButton jButtonQuit;
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel2;
 

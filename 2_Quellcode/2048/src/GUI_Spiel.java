@@ -58,7 +58,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	void initComponents() {
 
 		jLabel0 = new javax.swing.JLabel(); // 2048
-		jButton3 = new javax.swing.JButton(); // zur�ck zum Men�
+		jButtonMenu = new javax.swing.JButton(); // zur�ck zum Men�
 		jLabel1 = new javax.swing.JLabel(); // Feld1
 		jLabel2 = new javax.swing.JLabel(); // Feld2
 		jLabel3 = new javax.swing.JLabel(); // Feld3
@@ -89,10 +89,10 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		jLabel0.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		jLabel0.setText("2048");
 
-		jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12));
-		jButton3.setBackground(new java.awt.Color(153, 153, 153));
-		jButton3.setText("Back to Menu");
-		jButton3.addActionListener(new java.awt.event.ActionListener() {
+		jButtonMenu.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12));
+		jButtonMenu.setBackground(new java.awt.Color(153, 153, 153));
+		jButtonMenu.setText("Back to Menu");
+		jButtonMenu.addActionListener(new java.awt.event.ActionListener() {
 			public void actionPerformed(java.awt.event.ActionEvent evt) {
 				jButton3ActionPerformed(evt);
 			}
@@ -274,7 +274,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 												javax.swing.GroupLayout.PREFERRED_SIZE)))
 						.addContainerGap(102, Short.MAX_VALUE))
 				.addGroup(layout.createSequentialGroup()
-						.addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 125,
+						.addComponent(jButtonMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 125,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGap(26, 26, 26)
 						.addComponent(jLabel0, javax.swing.GroupLayout.PREFERRED_SIZE, 290,
@@ -289,7 +289,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 				.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 						.addComponent(jLabel0, javax.swing.GroupLayout.PREFERRED_SIZE, 117,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
-						.addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
+						.addComponent(jButtonMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 46,
 								javax.swing.GroupLayout.PREFERRED_SIZE)
 						.addGroup(layout.createSequentialGroup().addGap(16, 16, 16).addComponent(jLabelScore,
 								javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -370,7 +370,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		});
 	}
 
-	private javax.swing.JButton jButton3;
+	private javax.swing.JButton jButtonMenu;
 	private javax.swing.JLabel jLabel0;
 	private javax.swing.JLabel jLabel9;
 	private javax.swing.JLabel jLabel10;
