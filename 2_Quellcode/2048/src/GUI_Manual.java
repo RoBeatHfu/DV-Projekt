@@ -8,24 +8,16 @@ public class GUI_Manual extends javax.swing.JFrame {
 
 	private void initComponents() {
 
+		jButtonMenu = new javax.swing.JButton();
+		jLabel1 = new javax.swing.JLabel();
+		jLabel2 = new javax.swing.JLabel();
+
 		setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 		setTitle("2048 Manual");
 		setLocation(new java.awt.Point(200, 100));
 		setName("2048 Manual");
 		setPreferredSize(new java.awt.Dimension(620, 620));
 		setResizable(false);
-
-		jButton3 = new javax.swing.JButton();
-		jLabel1 = new javax.swing.JLabel();
-		jLabel2 = new javax.swing.JLabel();
-
-		jButton3.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12));
-		jButton3.setText("Back to Menu");
-		jButton3.addActionListener(new java.awt.event.ActionListener() {
-			public void actionPerformed(java.awt.event.ActionEvent evt) {
-				jButton3ActionPerformed(evt);
-			}
-		});
 
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80));
 		jLabel1.setForeground(new java.awt.Color(0, 136, 82));
@@ -36,6 +28,16 @@ public class GUI_Manual extends javax.swing.JFrame {
 		jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		jLabel2.setText(
 				"<html><body>At the beginning, there are two random tiles on the board, each with a 2 or a 4. <br>Using the arrow keys (up, down, right, left) the player moves the tiles on the board, with each turn moving as far as possible, as if they were sliding on the tilted board in the respective direction.<br>Two tiles with the same number next to each other, <br> they merge into a tile with the sum of the two tiles.<br>Additionally, with each move in an empty field, a random tile with a 2 or 4 is created. <br> <br>The goal of the game is to make a tile with the number 2048.</body<>/html>");
+
+
+		jButtonMenu.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 12));
+		jButtonMenu.setText("Back to Menu");
+		jButtonMenu.addActionListener(new java.awt.event.ActionListener() {
+			public void actionPerformed(java.awt.event.ActionEvent evt) {
+				jButtonMenuActionPerformed(evt);
+			}
+		});
+
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
 		getContentPane().setLayout(layout);
@@ -57,7 +59,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 		pack();
 	}
 
-	private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
+	private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {
 
 	}
 
@@ -91,7 +93,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 		});
 	}
 
-	private javax.swing.JButton jButton3;
+	private javax.swing.JButton jButtonMenu;
 	private javax.swing.JLabel jLabel1;
 	private javax.swing.JLabel jLabel2;
 

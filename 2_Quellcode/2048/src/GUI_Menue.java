@@ -24,7 +24,7 @@ public class GUI_Menue extends javax.swing.JFrame {
 		setPreferredSize(new java.awt.Dimension(400, 500));
 		setResizable(false);
 		setType(java.awt.Window.Type.POPUP);
-		
+
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80));
 		jLabel1.setForeground(new java.awt.Color(0, 136, 82));
 		jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -42,14 +42,14 @@ public class GUI_Menue extends javax.swing.JFrame {
 				jButtonPlayActionPerformed1(evt);
 			}
 		});
-		
+
 		jButtonPlay.addKeyListener(new java.awt.event.KeyAdapter() {
 			public void keyPressed(java.awt.event.KeyEvent evt) {
 				keyPressed(evt);
 			}
 		});
 
-	
+
 		jButtonHighscore.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
 		jButtonHighscore.setText("Highscore");
 		jButtonHighscore.setBackground(new java.awt.Color(153, 153, 153));
