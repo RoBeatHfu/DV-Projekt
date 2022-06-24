@@ -128,7 +128,7 @@ public class GUI_Menue extends javax.swing.JFrame {
 	private void jButton1ActionPerformed1(java.awt.event.ActionEvent evt) {
 		setVisible(false);
 		GUI_Spiel s1 = new GUI_Spiel();
-		s1.tt = this.tt;
+		s1.fieldSpiel = this.tt;
 		s1.setVisible(true);
 	}
 
