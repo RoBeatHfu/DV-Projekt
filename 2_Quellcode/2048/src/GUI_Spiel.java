@@ -42,6 +42,9 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			fieldSpiel.fusion('t');
 		}
 		System.out.println();
+		for(int i = 0; i < 16; i++) {
+			//setValue(i, fieldSpiel.getValue(i));
+		}
 
 	}
 
