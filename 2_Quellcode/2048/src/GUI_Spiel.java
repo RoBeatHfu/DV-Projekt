@@ -13,7 +13,9 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 		// refresh des Spielfelds nach jedem Zug!!!
 		initComponents();
-
+		for(int i = 0; i < 16; i++) {
+			setValue(i, fieldSpiel.getValue(i));
+		}
 		// aktivieren des keyListeners
 		addKeyListener(this);
 		setFocusable(true);
@@ -43,7 +45,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		}
 		System.out.println();
 		for(int i = 0; i < 16; i++) {
-			//setValue(i, fieldSpiel.getValue(i));
+			setValue(i, fieldSpiel.getValue(i));
 		}
 
 	}

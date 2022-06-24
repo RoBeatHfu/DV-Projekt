@@ -2,9 +2,12 @@
 
 public class GUI_Menue extends javax.swing.JFrame {
 
-	Fields tt;
-
+	Fields fieldsMenue;
+	GUI_Spiel s1;
+	
+	
 	public GUI_Menue() {
+		System.out.println("GUI_Menue");
 		initComponents();
 	}
 
@@ -130,8 +133,8 @@ public class GUI_Menue extends javax.swing.JFrame {
 
 	private void jButtonPlayActionPerformed1(java.awt.event.ActionEvent evt) {
 		setVisible(false);
-		GUI_Spiel s1 = new GUI_Spiel();
-		s1.fieldSpiel = tt;
+		s1 = new GUI_Spiel();
+		s1.fieldSpiel = fieldsMenue;
 		s1.setVisible(true);
 	}
 
