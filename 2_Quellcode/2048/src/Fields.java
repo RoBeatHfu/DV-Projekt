@@ -19,7 +19,7 @@ public class Fields {
 	/**
 	 * pushes fields to an edge and fusionate two fields with same values together in the opposite direction
 	 * after fusion, it is pushed towards the edge again. 
-	 * Fills a random free field with 2 or 4 
+	 * Fills a random free field with 2 or 4 if something was movable or fusionable
 	 * @param direction
 	 */
 	public void fusion(char direction) {
