@@ -5,7 +5,7 @@ public class Fields {
 	int [] oldField = new int [16];
 	int score = 0;
 	int fusions = 0;
-	boolean isFusible = true;
+	boolean hasMoved = false;
 	
 	public Fields() {
 		clearFields();
@@ -23,10 +23,11 @@ public class Fields {
 	 * @param direction
 	 */
 	public void fusion(char direction) {
-		moveUp(direction);
+		hasMoved = false;
 		for(int i = 0; i < 16; i++) {
 			oldField[i] = field[i];
 		}
+		moveUp(direction);
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
@@ -70,8 +71,17 @@ public class Fields {
 			break;
 		}
 		moveUp(direction);
-		fillFieldAfterMove();
-		printFields();
+		for(int i = 0; i < 16; i++) {
+			if(oldField[i] != field[i]) {
+				hasMoved = true;
+			}
+		}
+		if(hasMoved) {
+			fillFieldAfterMove();
+			printFields();
+		} else {
+			System.out.println("move not possible");
+		}
 	}
 		
 	/**
@@ -80,9 +90,7 @@ public class Fields {
 	 * @param direction 't' 'b' 'l' 'r'
 	 * @return whether it was possible to move
 	 */
-	private boolean moveUp(char direction) {
-		boolean hasMoved = false;
-		
+	private void moveUp(char direction) {
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
@@ -133,12 +141,6 @@ public class Fields {
 			}
 			break;
 		}
-		for(int i = 0; i < 16; i++) {
-			if(oldField[i] != field[i]) {
-				hasMoved = true;
-			}
-		}
-		return hasMoved;
 	}
 	
 	/**
