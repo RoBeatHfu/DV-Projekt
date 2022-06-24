@@ -30,7 +30,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80));
 		jLabel1.setForeground(new java.awt.Color(0, 136, 82));
 		jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		jLabel1.setText("Manuel");
+		jLabel1.setText("Manual");
 
 		jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
 		jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);

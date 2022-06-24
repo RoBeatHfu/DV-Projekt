@@ -1,13 +1,14 @@
 
 /*******Adrian******/
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 	Fields tt;
-	int Punkte = Fields.getScore(); 
-	int Feld1 = getValue(0);
+	int Punkte = tt.getScore(); 
+	int Feld1 = tt.getValue(0);
 
 	public GUI_Spiel() {
 
