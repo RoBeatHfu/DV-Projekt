@@ -28,7 +28,7 @@ public class Fields {
 			for(int k = 0; k < 4; k++) {
 				isFusible = true;
 				fusions = 0;
-				for(int j = 0; j < 4; j++) {
+				//for(int j = 0; j < 4; j++) {
 					if(isFusible && fusions < 2) {
 						for(int i = 0+k; i < 12+k; i = i+4) {
 							if(isFusionable(i, i+4) && isFusible) {
@@ -41,14 +41,14 @@ public class Fields {
 							}
 						}
 					}
-				}
+				//}
 			}
 			break;
 		case 'b':
 			for(int k = 0; k < 4; k++) {
 				isFusible = true;
 				fusions = 0;
-				for(int j = 0; j < 3; j++) {
+				//for(int j = 0; j < 3; j++) {
 					if(isFusible && fusions < 2) {
 						for(int i = 12+k; i > 0+k; i = i-4) {
 							if(isFusionable(i, i-4) && isFusible) {
@@ -61,14 +61,14 @@ public class Fields {
 							}
 						}
 					}				
-				}
+				//}
 			}
 			break;
 		case 'l':
 			for(int k = 0; k < 15; k = k+4) {
 				isFusible = true;
 				fusions = 0;
-				for(int j = 0; j < 3; j++) {
+				//for(int j = 0; j < 3; j++) {
 					if(isFusible && fusions < 2) {
 						for(int i = 0+k; i < 3+k; i++) {
 							if(isFusionable(i, i+1) && isFusible) {
@@ -81,16 +81,16 @@ public class Fields {
 							}
 						}
 					}				
-				}
+				//}
 			}
 			break;
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
 				isFusible = true;
 				fusions = 0;
-				for(int j = 0; j < 3; j++) {
+				//for(int j = 0; j < 3; j++) {
 					if(isFusible && fusions < 2) {
-						for(int i = 3+k; i > 0; i--) {
+						for(int i = 3+k; i > k; i--) {
 							if(isFusionable(i, i-1) && isFusible) {
 								setValue(i, getValue(i)*2);
 								setValue(i-1, 0);
@@ -101,7 +101,7 @@ public class Fields {
 							}
 						}
 					}		
-				}
+				//}
 			}
 			break;
 		}

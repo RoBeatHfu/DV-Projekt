@@ -1,4 +1,3 @@
-
 /*******Adrian******/
 
 import java.awt.event.KeyEvent;
@@ -19,8 +18,8 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
-		punkte = fieldSpiel.getScore(); 
-		feld1 = fieldSpiel.getValue(0);
+		//punkte = fieldSpiel.getScore(); 
+		//feld1 = fieldSpiel.getValue(0);
 	}
 
 	// Überschreibt die Tastatureingaben Verarbeitung
