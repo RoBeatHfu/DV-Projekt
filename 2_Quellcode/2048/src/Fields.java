@@ -26,82 +26,42 @@ public class Fields {
 		switch (direction) {
 		case 't':
 			for(int k = 0; k < 4; k++) {
-				isFusible = true;
-				fusions = 0;
-				//for(int j = 0; j < 4; j++) {
-					if(isFusible && fusions < 2) {
-						for(int i = 0+k; i < 12+k; i = i+4) {
-							if(isFusionable(i, i+4) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i+4, 0);
-								fusions++;
-								if(fusions == 2) {
-									isFusible = false;
-								}					
-							}
-						}
+				for(int i = 0+k; i < 12+k; i = i+4) {
+					if(isFusionable(i, i+4)) {
+						setValue(i, getValue(i)*2);
+						setValue(i+4, 0);						
 					}
-				//}
+				}
 			}
 			break;
 		case 'b':
 			for(int k = 0; k < 4; k++) {
-				isFusible = true;
-				fusions = 0;
-				//for(int j = 0; j < 3; j++) {
-					if(isFusible && fusions < 2) {
-						for(int i = 12+k; i > 0+k; i = i-4) {
-							if(isFusionable(i, i-4) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i-4, 0);
-								fusions++;
-								if(fusions == 2) {
-									isFusible = false;
-								}
-							}
-						}
-					}				
-				//}
+				for(int i = 12+k; i > 0+k; i = i-4) {
+					if(isFusionable(i, i-4)) {
+						setValue(i, getValue(i)*2);
+						setValue(i-4, 0);													
+					}
+				}
 			}
 			break;
 		case 'l':
 			for(int k = 0; k < 15; k = k+4) {
-				isFusible = true;
-				fusions = 0;
-				//for(int j = 0; j < 3; j++) {
-					if(isFusible && fusions < 2) {
-						for(int i = 0+k; i < 3+k; i++) {
-							if(isFusionable(i, i+1) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i+1, 0);
-								fusions++;
-								if(fusions == 2) {
-									isFusible = false;
-								}
-							}
-						}
-					}				
-				//}
+				for(int i = 0+k; i < 3+k; i++) {
+					if(isFusionable(i, i+1)) {
+						setValue(i, getValue(i)*2);
+						setValue(i+1, 0);
+					}
+				}
 			}
 			break;
 		case 'r':
 			for(int k = 0; k < 15; k = k+4) {
-				isFusible = true;
-				fusions = 0;
-				//for(int j = 0; j < 3; j++) {
-					if(isFusible && fusions < 2) {
-						for(int i = 3+k; i > k; i--) {
-							if(isFusionable(i, i-1) && isFusible) {
-								setValue(i, getValue(i)*2);
-								setValue(i-1, 0);
-								fusions++;
-								if(fusions == 2) {
-								isFusible = false;
-								}
-							}
-						}
-					}		
-				//}
+				for(int i = 3+k; i > k; i--) {
+					if(isFusionable(i, i-1)) {
+						setValue(i, getValue(i)*2);
+						setValue(i-1, 0);
+					}
+				}
 			}
 			break;
 		}
