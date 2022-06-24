@@ -2,6 +2,14 @@
 
 public class GUI_Menue extends javax.swing.JFrame {
 
+
+	private javax.swing.JButton jButtonPlay;
+	private javax.swing.JButton jButtonHighscore;
+	private javax.swing.JButton jButtonSettings;
+	private javax.swing.JButton jButtonQuit;
+	private javax.swing.JLabel jLabel1;
+	private javax.swing.JLabel jLabel2;
+
 	Fields fieldsMenue;
 	GUI_Spiel s1;
 	
@@ -167,12 +175,4 @@ public class GUI_Menue extends javax.swing.JFrame {
 			}
 		});
 	}
-
-	private javax.swing.JButton jButtonPlay;
-	private javax.swing.JButton jButtonHighscore;
-	private javax.swing.JButton jButtonSettings;
-	private javax.swing.JButton jButtonQuit;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel2;
-
 }

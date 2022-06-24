@@ -5,17 +5,33 @@ import java.awt.event.KeyListener;
 
 public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
+	private javax.swing.JButton jButtonMenu;
+	private javax.swing.JLabel jLabel0;
+	private javax.swing.JLabel jLabel9;
+	private javax.swing.JLabel jLabel10;
+	private javax.swing.JLabel jLabel11;
+	private javax.swing.JLabel jLabel12;
+	private javax.swing.JLabel jLabel13;
+	private javax.swing.JLabel jLabel14;
+	private javax.swing.JLabel jLabel15;
+	private javax.swing.JLabel jLabel16;
+	private javax.swing.JLabel jLabelScore;
+	private javax.swing.JLabel jLabel1;
+	private javax.swing.JLabel jLabel2;
+	private javax.swing.JLabel jLabel3;
+	private javax.swing.JLabel jLabel4;
+	private javax.swing.JLabel jLabel5;
+	private javax.swing.JLabel jLabel6;
+	private javax.swing.JLabel jLabel7;
+	private javax.swing.JLabel jLabel8;
 	Fields fieldSpiel;
 	int punkte;
 	int feld1;
-
+	
 	public GUI_Spiel() {
 
 		// refresh des Spielfelds nach jedem Zug!!!
 		initComponents();
-		for(int i = 0; i < 16; i++) {
-			setValue(i, fieldSpiel.getValue(i));
-		}
 		// aktivieren des keyListeners
 		addKeyListener(this);
 		setFocusable(true);
@@ -47,7 +63,23 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		for(int i = 0; i < 16; i++) {
 			setValue(i, fieldSpiel.getValue(i));
 		}
-
+		setValue(16, fieldSpiel.getScore());
+		fieldSpiel.getScore();
+		jLabel1.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel4.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel6.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel7.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel8.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel9.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel10.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel11.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel12.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel13.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel14.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel15.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel16.setBackground((new java.awt.Color(153, 153, 153)));
 	}
 
 	// Die Methode muss auch aufgeführt sein
@@ -375,27 +407,12 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		});
 	}
 
-	private javax.swing.JButton jButtonMenu;
-	private javax.swing.JLabel jLabel0;
-	private javax.swing.JLabel jLabel9;
-	private javax.swing.JLabel jLabel10;
-	private javax.swing.JLabel jLabel11;
-	private javax.swing.JLabel jLabel12;
-	private javax.swing.JLabel jLabel13;
-	private javax.swing.JLabel jLabel14;
-	private javax.swing.JLabel jLabel15;
-	private javax.swing.JLabel jLabel16;
-	private javax.swing.JLabel jLabelScore;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel2;
-	private javax.swing.JLabel jLabel3;
-	private javax.swing.JLabel jLabel4;
-	private javax.swing.JLabel jLabel5;
-	private javax.swing.JLabel jLabel6;
-	private javax.swing.JLabel jLabel7;
-	private javax.swing.JLabel jLabel8;
-
-	public void setValue(int index, int value) {
+	/**
+	 * puts the value into the label of the gui
+	 * @param index
+	 * @param value
+	 */
+	private void setValue(int index, int value) {
 		switch (index) {
 		case 0:
 			jLabel1.setText("" + value);
@@ -444,6 +461,42 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			break;
 		case 15:
 			jLabel16.setText("" + value);
+			break;
+		case 16:
+			jLabelScore.setText(""+value);
+			break;
+		default:
+			System.out.println("invalid index for fieldsSpiel");
+		}
+	}
+	
+	private void setColor(int value) {
+		switch(value) {
+		case 0:
+			break;
+		case 2:
+			break;
+		case 4:
+			break;
+		case 8:
+			break;
+		case 16:
+			break;
+		case 32:
+			break;
+		case 64:
+			break;
+		case 128:
+			break;
+		case 256:
+			break;
+		case 512:
+			break;
+		case 1024:
+			break;
+		case 2048:
+			break;
+		case 4098:
 			break;
 		}
 	}
