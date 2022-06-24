@@ -377,7 +377,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	}
 
 	private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
-		setVisible(false);
+		dispose();
 		new GUI_Menue().setVisible(true);
 	}
 
