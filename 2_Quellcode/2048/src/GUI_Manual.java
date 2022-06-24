@@ -35,7 +35,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 		jLabel2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
 		jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 		jLabel2.setText(
-				"<html><body>At the beginning, there are two random tiles on the board, each with a 2 or a 4. <br>Using the arrow keys (up, down, right, left) the player moves the tiles on the board, with each turn moving as far as possible, as if they were sliding on the tilted board in the respective direction.<br>Two tiles with the same number next to each other, they merge into a tile with the sum of the two tiles.<br>Additionally, with each move in an empty field, a random tile with a 2 or 4 is created. <br> <br>The goal of the game is to make a tile with the number 2048.</body<>/html>");
+				"<html><body>At the beginning, there are two random tiles on the board, each with a 2 or a 4. <br>Using the arrow keys (up, down, right, left) the player moves the tiles on the board, with each turn moving as far as possible, as if they were sliding on the tilted board in the respective direction.<br>Two tiles with the same number next to each other, <br> they merge into a tile with the sum of the two tiles.<br>Additionally, with each move in an empty field, a random tile with a 2 or 4 is created. <br> <br>The goal of the game is to make a tile with the number 2048.</body<>/html>");
 
 		javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
 		getContentPane().setLayout(layout);
