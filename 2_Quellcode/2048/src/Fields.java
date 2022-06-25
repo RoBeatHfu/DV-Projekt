@@ -275,34 +275,20 @@ public class Fields {
 				return false;
 			}
 		}
-		for (int k = 0; k < 4; k++) {				//possible fusion in direction 't'?
+		for (int k = 0; k < 4; k++) {				//possible fusion in vertical direction?
 			for (int i = 0 + k; i < 12 + k; i = i + 4) {
 				if (isFusionable(i, i + 4)) {
 					return false;
 				}
 			}
 		}
-		for (int k = 0; k < 4; k++) {				//possible fusion in direction 'b'?
-			for (int i = 12 + k; i > 0 + k; i = i - 4) {
-				if (isFusionable(i, i - 4)) {
-					return false;
-				}
-			}
-		}
-		for (int k = 0; k < 15; k = k + 4) {		//possible fusion in direction 'l'?
+		for (int k = 0; k < 15; k = k + 4) {		//possible fusion in horizontal direction?
 			for (int i = 0 + k; i < 3 + k; i++) {
 				if (isFusionable(i, i + 1)) {
 					return false;
 				}
 			}
-		}
-		for (int k = 0; k < 15; k = k + 4) {		//possible fusion in direction 'r'?
-			for (int i = 3 + k; i > k; i--) {
-				if (isFusionable(i, i - 1)) {
-					return false;
-				}
-			}
-		}
+		}		
 		return true;
 	}
 }
