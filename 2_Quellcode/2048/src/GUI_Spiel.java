@@ -522,7 +522,12 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	
 	private void updateFields() {
 		if(fieldSpiel.isGameOver()) {									//if game over
-			score = fieldSpiel.getScore();								//save score	
+			score = fieldSpiel.getScore();								//save score
+			try {
+				Thread.sleep(3000);
+			} catch (InterruptedException e) {
+				System.out.println(e.getMessage());
+			}
 			jLabel1.setBackground((new java.awt.Color(153, 153, 153)));	//set ackground color to grey
 			jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
