@@ -154,6 +154,7 @@ public class GUI_Menue extends javax.swing.JFrame {
 		setVisible(false);
 		s1 = new GUI_Spiel();
 		s1.fieldSpiel = fieldsMenue;
+		s1.updateFields();
 		s1.setVisible(true);
 	}
 

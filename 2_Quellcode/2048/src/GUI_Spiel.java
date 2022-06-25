@@ -520,7 +520,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		return color;
 	}
 	
-	private void updateFields() {
+	public void updateFields() {
 		if(fieldSpiel.isGameOver()) {									//if game over
 			score = fieldSpiel.getScore();								//save score
 			jLabel1.setBackground((new java.awt.Color(153, 153, 153)));	//set ackground color to grey
