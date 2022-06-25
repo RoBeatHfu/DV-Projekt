@@ -151,7 +151,7 @@ public class Fields {
 	 * @return
 	 */
 	private boolean isFusionable(int x, int y) {
-		if(getValue(x) == getValue(y)) {
+		if(getValue(x) == getValue(y) && isGameOver() == false ) {
 			return true;
 		
 		} else {
