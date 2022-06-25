@@ -30,11 +30,12 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	int feld1;
 
 	public GUI_Spiel() {
+		fieldSpiel = new Fields();
 		initComponents();
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
-		
+
 	}
 
 	// Überschreibt die Tastatureingaben Verarbeitung
@@ -116,8 +117,8 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		jLabel1.setBackground(new java.awt.Color(153, 153, 153));
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36));
 		jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-		 jLabel1.setText("");
-		//jLabel1.setText("" + feld1);
+		jLabel1.setText("");
+		// jLabel1.setText("" + feld1);
 		jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
 		jLabel2.setOpaque(true);
@@ -519,11 +520,11 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		}
 		return color;
 	}
-	
+
 	public void updateFields() {
-		if(fieldSpiel.isGameOver()) {									//if game over
-			score = fieldSpiel.getScore();								//save score
-			jLabel1.setBackground((new java.awt.Color(153, 153, 153)));	//set ackground color to grey
+		if (fieldSpiel.isGameOver()) { // if game over
+			score = fieldSpiel.getScore(); // save score
+			jLabel1.setBackground((new java.awt.Color(153, 153, 153))); // set ackground color to grey
 			jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel4.setBackground((new java.awt.Color(153, 153, 153)));
@@ -539,7 +540,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			jLabel14.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel15.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel16.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel1.setText("");										//set text to "GAME OVER"
+			jLabel1.setText(""); // set text to "GAME OVER"
 			jLabel2.setText("");
 			jLabel3.setText("");
 			jLabel4.setText("");
@@ -562,25 +563,41 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			}
 			setValue(16, fieldSpiel.getScore());
 			fieldSpiel.getScore();
-			jLabel1.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(0)), setColorG(fieldSpiel.getValue(0)), setColorB(fieldSpiel.getValue(0)))));
-			jLabel2.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(1)), setColorG(fieldSpiel.getValue(1)), setColorB(fieldSpiel.getValue(1)))));
-			jLabel3.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(2)), setColorG(fieldSpiel.getValue(2)), setColorB(fieldSpiel.getValue(2)))));
-			jLabel4.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(3)), setColorG(fieldSpiel.getValue(3)), setColorB(fieldSpiel.getValue(3)))));
-			jLabel5.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(4)), setColorG(fieldSpiel.getValue(4)), setColorB(fieldSpiel.getValue(4)))));
-			jLabel6.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(5)), setColorG(fieldSpiel.getValue(5)), setColorB(fieldSpiel.getValue(5)))));
-			jLabel7.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(6)), setColorG(fieldSpiel.getValue(6)), setColorB(fieldSpiel.getValue(6)))));
-			jLabel8.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(7)), setColorG(fieldSpiel.getValue(7)), setColorB(fieldSpiel.getValue(7)))));
-			jLabel9.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(8)), setColorG(fieldSpiel.getValue(8)), setColorB(fieldSpiel.getValue(8)))));
-			jLabel10.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(9)), setColorG(fieldSpiel.getValue(9)), setColorB(fieldSpiel.getValue(9)))));
-			jLabel11.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(10)), setColorG(fieldSpiel.getValue(10)), setColorB(fieldSpiel.getValue(10)))));
-			jLabel12.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(11)), setColorG(fieldSpiel.getValue(11)), setColorB(fieldSpiel.getValue(11)))));
-			jLabel13.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(12)), setColorG(fieldSpiel.getValue(12)), setColorB(fieldSpiel.getValue(12)))));
-			jLabel14.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(13)), setColorG(fieldSpiel.getValue(13)), setColorB(fieldSpiel.getValue(13)))));
-			jLabel15.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(14)), setColorG(fieldSpiel.getValue(14)), setColorB(fieldSpiel.getValue(14)))));
-			jLabel16.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(15)), setColorG(fieldSpiel.getValue(15)), setColorB(fieldSpiel.getValue(15)))));
+			jLabel1.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(0)),
+					setColorG(fieldSpiel.getValue(0)), setColorB(fieldSpiel.getValue(0)))));
+			jLabel2.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(1)),
+					setColorG(fieldSpiel.getValue(1)), setColorB(fieldSpiel.getValue(1)))));
+			jLabel3.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(2)),
+					setColorG(fieldSpiel.getValue(2)), setColorB(fieldSpiel.getValue(2)))));
+			jLabel4.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(3)),
+					setColorG(fieldSpiel.getValue(3)), setColorB(fieldSpiel.getValue(3)))));
+			jLabel5.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(4)),
+					setColorG(fieldSpiel.getValue(4)), setColorB(fieldSpiel.getValue(4)))));
+			jLabel6.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(5)),
+					setColorG(fieldSpiel.getValue(5)), setColorB(fieldSpiel.getValue(5)))));
+			jLabel7.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(6)),
+					setColorG(fieldSpiel.getValue(6)), setColorB(fieldSpiel.getValue(6)))));
+			jLabel8.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(7)),
+					setColorG(fieldSpiel.getValue(7)), setColorB(fieldSpiel.getValue(7)))));
+			jLabel9.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(8)),
+					setColorG(fieldSpiel.getValue(8)), setColorB(fieldSpiel.getValue(8)))));
+			jLabel10.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(9)),
+					setColorG(fieldSpiel.getValue(9)), setColorB(fieldSpiel.getValue(9)))));
+			jLabel11.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(10)),
+					setColorG(fieldSpiel.getValue(10)), setColorB(fieldSpiel.getValue(10)))));
+			jLabel12.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(11)),
+					setColorG(fieldSpiel.getValue(11)), setColorB(fieldSpiel.getValue(11)))));
+			jLabel13.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(12)),
+					setColorG(fieldSpiel.getValue(12)), setColorB(fieldSpiel.getValue(12)))));
+			jLabel14.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(13)),
+					setColorG(fieldSpiel.getValue(13)), setColorB(fieldSpiel.getValue(13)))));
+			jLabel15.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(14)),
+					setColorG(fieldSpiel.getValue(14)), setColorB(fieldSpiel.getValue(14)))));
+			jLabel16.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(15)),
+					setColorG(fieldSpiel.getValue(15)), setColorB(fieldSpiel.getValue(15)))));
 		}
 	}
-	
+
 	public static void main(String args[]) {
 
 		try {

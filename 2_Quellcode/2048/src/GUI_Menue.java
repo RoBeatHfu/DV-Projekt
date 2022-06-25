@@ -6,9 +6,7 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.util.prefs.Preferences;
 
-
 public class GUI_Menue extends javax.swing.JFrame {
-
 
 	private javax.swing.JButton jButtonPlay;
 	private javax.swing.JButton jButtonHighscore;
@@ -18,16 +16,14 @@ public class GUI_Menue extends javax.swing.JFrame {
 	private javax.swing.JLabel jLabel2;
 
 	Fields fieldsMenue;
-	GUI_Spiel s1;
-	
-	
+	GUI_Spiel Spiel;
+
 	public GUI_Menue() {
 		System.out.println("GUI_Menue");
 		initComponents();
 	}
 
 	private void initComponents() {
-		
 
 		jLabel1 = new javax.swing.JLabel(); // 2048
 		// jLabel2 = new javax.swing.JLabel();
@@ -39,13 +35,13 @@ public class GUI_Menue extends javax.swing.JFrame {
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		setTitle("2048 Menue");
 		setLocation(new java.awt.Point(0, 0));
-	//setLocation(new java.awt.Point(x));
+		// setLocation(new java.awt.Point(x));
 		setName("2048");
 		setPreferredSize(new java.awt.Dimension(400, 500));
 		setResizable(false);
 		setType(java.awt.Window.Type.POPUP);
-		
-    //Point x = getLocationOnScreen();
+
+		// Point x = getLocationOnScreen();
 
 		jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80));
 		jLabel1.setForeground(new java.awt.Color(0, 136, 82));
@@ -54,7 +50,6 @@ public class GUI_Menue extends javax.swing.JFrame {
 
 		// jLabel2.setIcon(new
 		// javax.swing.ImageIcon("https://github.com/RoBeatHfu/DV-Projekt/blob/main/1_Projektskizze/images/background.png"));
-
 
 		jButtonPlay.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 36));
 		jButtonPlay.setText("Play");
@@ -70,7 +65,6 @@ public class GUI_Menue extends javax.swing.JFrame {
 				keyPressed(evt);
 			}
 		});
-
 
 		jButtonHighscore.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 18));
 		jButtonHighscore.setText("Highscore");
@@ -152,10 +146,10 @@ public class GUI_Menue extends javax.swing.JFrame {
 
 	private void jButtonPlayActionPerformed1(java.awt.event.ActionEvent evt) {
 		setVisible(false);
-		s1 = new GUI_Spiel();
-		s1.fieldSpiel = fieldsMenue;
-		s1.updateFields();
-		s1.setVisible(true);
+		Spiel = new GUI_Spiel();
+		//Spiel.
+		Spiel.updateFields();
+		Spiel.setVisible(true);
 	}
 
 	private void jButtonHighscoreActionPerformed(java.awt.event.ActionEvent evt) {
