@@ -203,7 +203,6 @@ public class Fields {
 		for(int i = 0; i < 16; i++) {
 			score = score + getValue(i);
 		}
-		System.out.println("Score: " + score);
 		return score;
 	}
 	
@@ -258,7 +257,7 @@ public class Fields {
 		System.out.println();
 	}
 	
-	private boolean isGameOver() {
+	public boolean isGameOver() {
 		boolean gameOver = true;
 		for(int i = 0; i < 16; i++) {
 			if(getValue(i) == 0) {
