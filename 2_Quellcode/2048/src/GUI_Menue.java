@@ -1,11 +1,6 @@
 
 /******* Adrian ******/
 
-import java.awt.Point;
-import java.awt.event.WindowAdapter;
-import java.awt.event.WindowEvent;
-import java.util.prefs.Preferences;
-
 public class GUI_Menue extends javax.swing.JFrame {
 
 	private javax.swing.JButton jButtonPlay;
@@ -13,7 +8,6 @@ public class GUI_Menue extends javax.swing.JFrame {
 	private javax.swing.JButton jButtonSettings;
 	private javax.swing.JButton jButtonQuit;
 	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel2;
 
 	Fields fieldsMenue;
 	GUI_Spiel Spiel;
