@@ -1,5 +1,5 @@
 
-/*******Adrian******/
+/*******Adrian+Dominik******/
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -40,7 +40,6 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	// Überschreibt die Tastatureingaben Verarbeitung
 	@Override
 	public void keyPressed(KeyEvent e) {
-		System.out.println("keyPresssed Methode");
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 			System.out.println("Moving Right");
 			fieldSpiel.fusion('r');
