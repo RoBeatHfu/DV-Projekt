@@ -523,23 +523,18 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	private void updateFields() {
 		if(fieldSpiel.isGameOver()) {									//if game over
 			score = fieldSpiel.getScore();								//save score
-			try {
-				Thread.sleep(3000);
-			} catch (InterruptedException e) {
-				System.out.println(e.getMessage());
-			}
 			jLabel1.setBackground((new java.awt.Color(153, 153, 153)));	//set ackground color to grey
 			jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel4.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel5.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel6.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel7.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel8.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel9.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel10.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel11.setBackground((new java.awt.Color(255, 0, 0)));
-			jLabel12.setBackground((new java.awt.Color(255, 0, 0)));
+			jLabel5.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel6.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel7.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel8.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel9.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel10.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel11.setBackground((new java.awt.Color(153, 153, 153)));
+			jLabel12.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel13.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel14.setBackground((new java.awt.Color(153, 153, 153)));
 			jLabel15.setBackground((new java.awt.Color(153, 153, 153)));
