@@ -9,21 +9,20 @@ public class Account {
 	 */
 
 	private static void printTetx(String text) {
-		PrintWriter pWriter = null;
-		String src = "player.txt";
 		try {
-			pWriter = new PrintWriter(new FileWriter(src));
-			pWriter.println(text);
-			System.out.println("fertig");
-		} catch (IOException ioe) {
-			ioe.printStackTrace();
-		}
+			PrintWriter list = new PrintWriter(new FileOutputStream("player.txt"));
+			list.println(text);
+			list.close(); // wichtig !!
+			}
+			catch (IOException ex) {
+			System.out.println("IOException!");
+			}
 	}
 
 	
 
 	public static void main(String args[]) {
-		printTetx("HALLOOOO");
+		printTetx("Huhu");
 
 	}
 
