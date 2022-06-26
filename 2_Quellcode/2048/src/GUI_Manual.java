@@ -2,9 +2,18 @@
 
 public class GUI_Manual extends javax.swing.JFrame {
 
+	private javax.swing.JButton jButtonMenu;
+	private javax.swing.JLabel jLabel1;
+	private javax.swing.JLabel jLabel2;
+
 	public GUI_Manual() {
 		initComponents();
 	}
+
+	/**
+	 * Showing Manual on screen
+	 * 
+	 */
 
 	private void initComponents() {
 
@@ -58,7 +67,8 @@ public class GUI_Manual extends javax.swing.JFrame {
 
 		pack();
 	}
-
+	
+	
 	private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {
 
 	}
@@ -93,8 +103,6 @@ public class GUI_Manual extends javax.swing.JFrame {
 		});
 	}
 
-	private javax.swing.JButton jButtonMenu;
-	private javax.swing.JLabel jLabel1;
-	private javax.swing.JLabel jLabel2;
+	
 
 }
