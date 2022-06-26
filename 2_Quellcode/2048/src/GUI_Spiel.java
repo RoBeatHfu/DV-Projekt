@@ -78,7 +78,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	void initComponents() {
 
 		jLabel0 = new javax.swing.JLabel(); // 2048
-		jButtonMenu = new javax.swing.JButton(); // zur�ck zum Men�
+		jButtonMenu = new javax.swing.JButton(); // zurueck zum Menue
 		jLabel1 = new javax.swing.JLabel(); // Feld1
 		jLabel2 = new javax.swing.JLabel(); // Feld2
 		jLabel3 = new javax.swing.JLabel(); // Feld3
@@ -634,4 +634,5 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			}
 		});
 	}
+
 }
