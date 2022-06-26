@@ -2,12 +2,18 @@
 
 public class GUI_SaveScore extends javax.swing.JDialog {
 
+	private javax.swing.JButton jButtonSave;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JPasswordField jPasswordField1;
+    
     public GUI_SaveScore(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
-
-                     
+                   
     private void initComponents() {
 
       
@@ -136,14 +142,5 @@ public class GUI_SaveScore extends javax.swing.JDialog {
                 dialog.setVisible(true);
             }
         });
-    }
-
-
-    private javax.swing.JButton jButtonSave;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
-                  
+    }              
 }
