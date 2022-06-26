@@ -1,37 +1,30 @@
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
+import java.io.*;
 
 public class Account {
-    
-      
-    /*  Anmeldung: Neuen Account erstellen oder anmelden?
-       Name und Passwort abfragen 
-      
-      if(anmelden==true) {
-           player.anmelden(Name,Passwort)
-      }
-      if(register==true) {  */ 
-      
-      
-    
-        
 
-       
-        public static void registrieren(String text) {
-            try {
-				Files.writeString(Path.of("player.txt"), text);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	/*
+	 * Anmeldung: Neuen Account erstellen oder anmelden? Name und Passwort abfragen
+	 * 
+	 * if(anmelden==true) { player.anmelden(Name,Passwort) } if(register==true) {
+	 */
 
-        }
-        
-        public static void main(String args[]) {
-        	registrieren("Hallo");
-        	registrieren("Zeile 2");
-        	
-        }
+	private static void printTetx(String text) {
+		PrintWriter pWriter = null;
+		String src = "player.txt";
+		try {
+			pWriter = new PrintWriter(new FileWriter(src));
+			pWriter.println(text);
+			System.out.println("fertig");
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
+		}
+	}
 
- }
+	
+
+	public static void main(String args[]) {
+		printTetx("HALLOOOO");
+
+	}
+
+}
