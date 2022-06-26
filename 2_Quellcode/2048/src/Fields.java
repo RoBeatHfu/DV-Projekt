@@ -267,7 +267,7 @@ public class Fields {
 	/**
 	 * Checks whether the game is over by first searching for a free field.
 	 * If that was not successful, the method checks whether another move is possible.
-	 * @return
+	 * @return true or false
 	 */
 	public boolean isGameOver() {
 		for (int i = 0; i < 16; i++) {				//field free?
