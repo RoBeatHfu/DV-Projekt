@@ -531,41 +531,8 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	}
 
 	public void updateFields() {
-		if (fieldSpiel.isGameOver()) { // if game over
-			score = fieldSpiel.getScore(); // save score
-			jLabel1.setBackground((new java.awt.Color(153, 153, 153))); // set ackground color to grey
-			jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel4.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel5.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel6.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel7.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel8.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel9.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel10.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel11.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel12.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel13.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel14.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel15.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel16.setBackground((new java.awt.Color(153, 153, 153)));
-			jLabel1.setText(""); // set text to "GAME OVER"
-			jLabel2.setText("");
-			jLabel3.setText("");
-			jLabel4.setText("");
-			jLabel5.setText("G");
-			jLabel6.setText("A");
-			jLabel7.setText("M");
-			jLabel8.setText("E");
-			jLabel9.setText("O");
-			jLabel10.setText("V");
-			jLabel11.setText("E");
-			jLabel12.setText("R");
-			jLabel13.setText("");
-			jLabel14.setText("");
-			jLabel15.setText("");
-			jLabel16.setText("");
-			fieldSpiel = null;
+		if (fieldSpiel.isGameOver()) {
+			setGameOver();
 		} else {
 			System.out.println();
 			for (int i = 0; i < 16; i++) {
@@ -606,6 +573,47 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			jLabel16.setBackground((new java.awt.Color(setColorR(fieldSpiel.getValue(15)),
 					setColorG(fieldSpiel.getValue(15)), setColorB(fieldSpiel.getValue(15)))));
 		}
+	}
+	
+	/**
+	 * saves the score and sets the backgroundcolor to grey
+	 * prints "GAME OVER" into the fild
+	 */
+	private void setGameOver() {
+		score = fieldSpiel.getScore(); // save score
+		jLabel1.setBackground((new java.awt.Color(153, 153, 153))); // set ackground color to grey
+		jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel4.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel5.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel6.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel7.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel8.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel9.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel10.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel11.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel12.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel13.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel14.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel15.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel16.setBackground((new java.awt.Color(153, 153, 153)));
+		jLabel1.setText(""); // set text to "GAME OVER"
+		jLabel2.setText("");
+		jLabel3.setText("");
+		jLabel4.setText("");
+		jLabel5.setText("G");
+		jLabel6.setText("A");
+		jLabel7.setText("M");
+		jLabel8.setText("E");
+		jLabel9.setText("O");
+		jLabel10.setText("V");
+		jLabel11.setText("E");
+		jLabel12.setText("R");
+		jLabel13.setText("");
+		jLabel14.setText("");
+		jLabel15.setText("");
+		jLabel16.setText("");
+		fieldSpiel = null;
 	}
 
 	public static void main(String args[]) {
