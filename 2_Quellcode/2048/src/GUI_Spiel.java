@@ -556,6 +556,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			jLabel14.setText("");
 			jLabel15.setText("");
 			jLabel16.setText("");
+			fieldSpiel = null;
 		} else {
 			System.out.println();
 			for (int i = 0; i < 16; i++) {
