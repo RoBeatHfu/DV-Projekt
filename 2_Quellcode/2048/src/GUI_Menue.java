@@ -147,6 +147,8 @@ public class GUI_Menue extends javax.swing.JFrame {
 	}
 
 	private void jButtonHighscoreActionPerformed(java.awt.event.ActionEvent evt) {
+		setVisible(false);
+		new GUI_Highscore(Spiel, rootPaneCheckingEnabled).setVisible(true);
 
 	}
 
