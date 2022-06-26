@@ -19,8 +19,8 @@ public class GUI_Highscore extends javax.swing.JDialog {
       
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(800, 500));
-        setMinimumSize(new java.awt.Dimension(800, 500));
+        setPreferredSize(new java.awt.Dimension(800, 500));
+        setResizable(false);
 
         jLabel1.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 80)); 
         jLabel1.setForeground(new java.awt.Color(0, 136, 82));
