@@ -3,7 +3,7 @@ public class Player {
 
 	private String name;
 	private String password;
-	private int[] game = new int[16];
+	private String game;
 	
 	public Player(String nickname, String password) {
 		name = nickname;
@@ -19,6 +19,8 @@ public class Player {
 	}
 	
 	public void setGame(String allFields) {
-		
+		game = allFields;
 	}
+	
+	
 }
