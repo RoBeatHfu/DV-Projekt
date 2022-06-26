@@ -581,6 +581,8 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	 */
 	private void setGameOver() {
 		score = fieldSpiel.getScore(); // save score
+		System.out.println("Your values:");
+		System.out.println(fieldSpiel.toString());
 		jLabel1.setBackground((new java.awt.Color(153, 153, 153))); // set ackground color to grey
 		jLabel2.setBackground((new java.awt.Color(153, 153, 153)));
 		jLabel3.setBackground((new java.awt.Color(153, 153, 153)));
