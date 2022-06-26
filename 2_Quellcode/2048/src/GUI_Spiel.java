@@ -38,7 +38,9 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 	}
 
-	// Überschreibt die Tastatureingaben Verarbeitung
+	/**
+	 * Overrides keystroke processing
+	 */
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
@@ -70,6 +72,9 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	public void keyTyped(KeyEvent e) {
 	}
 
+	/** 
+	 * Create GUI
+	 */
 	void initComponents() {
 
 		jLabel0 = new javax.swing.JLabel(); // 2048
@@ -352,7 +357,11 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 
 		pack();
 	}
-
+	
+	/**
+	 * Shows Menue
+	 * @param evt
+	 */
 	private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {
 		dispose();
 		new GUI_Menue().setVisible(true);
