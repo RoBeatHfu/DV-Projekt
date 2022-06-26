@@ -3,6 +3,10 @@
 
 public class GUI_Highscore extends javax.swing.JDialog {
 
+    private javax.swing.JButton jButtonMenue;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JList<String> jList1;
+    private javax.swing.JScrollPane jScrollPane1;
     
     public GUI_Highscore(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -106,12 +110,5 @@ public class GUI_Highscore extends javax.swing.JDialog {
                 dialog.setVisible(true);
             }
         });
-    }
-
-                     
-    private javax.swing.JButton jButtonMenue;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JList<String> jList1;
-    private javax.swing.JScrollPane jScrollPane1;
-                   
+    }             
 }
