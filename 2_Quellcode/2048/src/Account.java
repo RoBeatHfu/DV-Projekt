@@ -18,16 +18,20 @@ public class Account {
         
 
        
-        public void registrieren() {
-            String playername = "Moritz";
-            String filename = "player.txt";
+        public static void registrieren(String text) {
             try {
-				Files.writeString(Path.of("player.txt"), playername);
+				Files.writeString(Path.of("player.txt"), text);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 
+        }
+        
+        public static void main(String args[]) {
+        	registrieren("Hallo");
+        	registrieren("Zeile 2");
+        	
         }
 
  }
