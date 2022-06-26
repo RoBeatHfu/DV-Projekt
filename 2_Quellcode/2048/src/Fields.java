@@ -291,4 +291,17 @@ public class Fields {
 		}		
 		return true;
 	}
+	
+	/**
+	 * Put the value of each of the 16 fields in one String
+	 * @return String with every 16 values, seperated by a space
+	 */
+	public String toString() {
+		String allFields = "";
+		for(int i = 0; i < 16; i++) {
+			allFields = allFields + field[i] + " ";
+		}
+		System.out.println("allFields: " + allFields);
+		return allFields;
+	}
 }

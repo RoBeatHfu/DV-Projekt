@@ -18,7 +18,7 @@ public class Player {
 		return password;
 	}
 	
-	public void setGame() {
+	public void setGame(String allFields) {
 		
 	}
 }
