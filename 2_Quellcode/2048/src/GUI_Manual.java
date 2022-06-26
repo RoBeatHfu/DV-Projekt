@@ -11,7 +11,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 	}
 
 	/**
-	 * Showing Manual on screen
+	 * Initialise Manual on screen
 	 * 
 	 */
 
@@ -68,7 +68,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 		pack();
 	}
 	
-	
+
 	private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {
 
 	}
@@ -95,6 +95,10 @@ public class GUI_Manual extends javax.swing.JFrame {
 			java.util.logging.Logger.getLogger(GUI_Manual.class.getName()).log(java.util.logging.Level.SEVERE, null,
 					ex);
 		}
+
+		/**
+		 * Show GUI / Manual
+		 */
 
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
