@@ -1,4 +1,3 @@
-
 public class HelperFunctions {
 	
 	public static int[] drawDigitsFromString(String strValue){
@@ -9,10 +8,13 @@ public class HelperFunctions {
         for (int i = 0; i < str.length(); i++) {
             char chrs = str.charAt(i);
             if(chrs == '\n') {
-            	digits.trim();
-            	highscore[index] = Integer.parseInt(digits); 
-            	index++;
-            	digits = "";
+            	if(digits != "")
+            	{
+	            	digits.trim();
+	            	highscore[index] = Integer.parseInt(digits); 
+	            	index++;
+	            	digits = "";
+            	}
             }
             if (Character.isDigit(chrs))
                 digits = digits+chrs;
@@ -32,7 +34,8 @@ public class HelperFunctions {
             	letters = "";
             }
             if (!Character.isDigit(chrs))
-                letters = letters+chrs;
+            	if(chrs != '\r' && chrs != '\n')
+            		letters = letters+chrs;
         }
         return names;
     }
