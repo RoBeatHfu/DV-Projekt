@@ -618,8 +618,7 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 		jLabel14.setText("");
 		jLabel15.setText("");
 		jLabel16.setText("");
-		// new GUI_SaveScore(null, rootPaneCheckingEnabled).setVisible(true); //Fenster
-		// zum abspeichern des Scores mit Name und Passwort
+		new GUI_SaveScore(null, rootPaneCheckingEnabled).setVisible(true); //Fenster zum abspeichern des Scores mit Name und Passwort
 		fieldSpiel = null;
 	}
 
