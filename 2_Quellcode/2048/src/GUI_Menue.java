@@ -163,8 +163,6 @@ public class GUI_Menue extends javax.swing.JFrame {
 	 */
 
 	public static void main(String args[]) {
-		GUI_Menue guiM1 = new GUI_Menue();
-		guiM1.setVisible(true);
 		try {
 			for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
 				if ("Nimbus".equals(info.getName())) {
