@@ -1,5 +1,5 @@
-
 /******* Adrian ******/
+
 
 public class GUI_Menue extends javax.swing.JFrame {
 
@@ -146,7 +146,6 @@ public class GUI_Menue extends javax.swing.JFrame {
 	private void jButtonPlayActionPerformed1(java.awt.event.ActionEvent evt) {
 		setVisible(false);
 		Spiel = new GUI_Spiel();
-		// Spiel.
 		Spiel.updateFields();
 		Spiel.setVisible(true);
 	}

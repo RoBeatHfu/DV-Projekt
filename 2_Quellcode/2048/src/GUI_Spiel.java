@@ -648,5 +648,4 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 			}
 		});
 	}
-
 }

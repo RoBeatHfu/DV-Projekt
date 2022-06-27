@@ -1,5 +1,6 @@
 /******* Adrian ******/
 
+
 public class GUI_Manual extends javax.swing.JFrame {
 
 	private javax.swing.JButton jButtonMenu;
@@ -69,8 +70,7 @@ public class GUI_Manual extends javax.swing.JFrame {
 	}
 	
 
-	private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {
-
+	private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) { //nicht notwendig da Anleitung in separatem Fenster geöffnet werden soll 
 	}
 
 	public static void main(String args[]) {
@@ -106,7 +106,5 @@ public class GUI_Manual extends javax.swing.JFrame {
 			}
 		});
 	}
-
-	
 
 }

@@ -1,4 +1,5 @@
-/*******Adrian+Dominik******/
+/*******Adrian******/
+
 
 public class GUI_SaveScore extends javax.swing.JDialog {
 
@@ -106,8 +107,7 @@ public class GUI_SaveScore extends javax.swing.JDialog {
        dispose();
     }                                        
 
-    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                                     
-       
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {                                                         
     }                                                    
 
    

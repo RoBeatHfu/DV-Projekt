@@ -21,7 +21,6 @@ public class GUI_Highscore extends javax.swing.JDialog {
         jButtonMenue = new javax.swing.JButton();
 
       
-
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(800, 500));
         setResizable(false);
