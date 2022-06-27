@@ -377,9 +377,10 @@ public class GUI_Spiel extends javax.swing.JFrame implements KeyListener {
 	private void setValue(int index, int value) {
 		javax.swing.JLabel[] arrObj = { jLabel1, jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, jLabel9,
 				jLabel10, jLabel11, jLabel12, jLabel13, jLabel14, jLabel15, jLabel16, jLabelScore };
-		if (fieldSpiel.isGameOver())
-			return;
-		else if (value == 0)
+		//if (fieldSpiel.isGameOver())
+		//	return;
+		//else
+		 if (value == 0)
 			arrObj[index].setText("");
 		else
 			arrObj[index].setText("" + value);
