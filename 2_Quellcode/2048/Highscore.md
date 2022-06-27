@@ -1,3 +1,3 @@
-player 308
+player 2132
+player  308
 Leer  1
-Leer 2
