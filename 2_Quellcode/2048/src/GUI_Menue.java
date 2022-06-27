@@ -16,6 +16,11 @@ public class GUI_Menue extends javax.swing.JFrame {
 		System.out.println("GUI_Menue");
 		initComponents();
 	}
+	
+	/**
+	 * Creates Gui-Menue
+	 */
+
 
 	private void initComponents() {
 
@@ -151,6 +156,11 @@ public class GUI_Menue extends javax.swing.JFrame {
 		new GUI_Highscore(Spiel, rootPaneCheckingEnabled).setVisible(true);
 
 	}
+
+	/**
+	 * Main-Function
+	 * @param args
+	 */
 
 	public static void main(String args[]) {
 		GUI_Menue guiM1 = new GUI_Menue();
