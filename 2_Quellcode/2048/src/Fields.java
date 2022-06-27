@@ -8,7 +8,6 @@ public class Fields {
 	int[] field = new int[16]; // Array contains the values of the fields
 	int[] oldField = new int[16]; // to check if a move was possible
 	int score = 0;
-	int fusions = 0;
 	boolean hasMoved = false;
 
 	public Fields() {
@@ -308,6 +307,7 @@ public class Fields {
 		System.out.println("allFields: " + allFields);
 		return allFields;
 	}
+	
 	//public static void setName(String givenName) {
 	//	name = givenName;
 	//}
