@@ -308,13 +308,15 @@ public class Fields {
 		System.out.println("allFields: " + allFields);
 		return allFields;
 	}
+	public static void setName(String givenName) {
+		name = givenName;
+	}
 	public void changeHighscore() {
 		if (isGameOver()) {
 			String everything;
 			int achievedScore = getScore(); 
-			String name = "Adrian";
 			String path = System.getProperty("user.dir");
-			String command ="python /c start " + path + "/GithubDownload.py";
+			String command ="python " + path + "\\GitHubDownload.py";
 			try {
 				Process p= Runtime.getRuntime().exec(command);
 				BufferedReader br = new BufferedReader(new FileReader("Highscore.md"));
@@ -334,6 +336,7 @@ public class Fields {
 				int actualHighscore[] = HelperFunctions.drawDigitsFromString(everything);
 				String[] names = HelperFunctions.getNamesFromHighscore(everything);
 				for(int i = 0; i < 3; i++) {
+					names[i].trim();
 					int helper;
 					String helperName;
 					if(achievedScore > actualHighscore[i]) {
@@ -363,7 +366,7 @@ public class Fields {
 				PrintWriter out = new PrintWriter("Highscore.md");
 				out.write(output);
 				out.close();
-				command ="python /c start " + path + "/GithubUpload.py";
+				command ="python " + path + "\\GitHubUpload.py";
 				Process p2= Runtime.getRuntime().exec(command);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
