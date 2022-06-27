@@ -308,9 +308,9 @@ public class Fields {
 		System.out.println("allFields: " + allFields);
 		return allFields;
 	}
-	public static void setName(String givenName) {
-		name = givenName;
-	}
+	//public static void setName(String givenName) {
+	//	name = givenName;
+	//}
 	public void changeHighscore() {
 		if (isGameOver()) {
 			String everything;
@@ -343,7 +343,7 @@ public class Fields {
 						helper = actualHighscore[i];
 						actualHighscore[i] = achievedScore;
 						helperName = names[i];
-						names[i] = name;
+						names[i] = "player";
 						if(i == 0) {
 							int helper2 = actualHighscore[1];
 							actualHighscore[1] = helper;
