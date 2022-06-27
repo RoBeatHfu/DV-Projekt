@@ -1,3 +1,3 @@
-Adrian 106
-Nick Rothmund 16
-Robert 4
+Adrian 174
+Nick Rothmund  16
+Dominik Butscher 8
